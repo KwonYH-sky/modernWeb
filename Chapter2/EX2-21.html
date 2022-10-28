@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <audio controls>
+      <source src="/audio/music.flac" type="audio/flac" />
+      <source src="/audio/music.mp3" type="audio/mp3" />
+      <source src="/audio/music.ogg" type="audio/ogg" />
+    </audio>
+  </body>
+</html>
+
+<!--
+    웹 브라우저 버전에 따라 오디오가 실행 되지 않읋 수 있다.
+    지원하는 확장자 형식이 다르기 때문
+
+    이러한 문제를 해결하고자 만들어진 태그가 source 태그이다.
+    source태그는 audio 태그 또는 video 태그 안에 입력하는 태그
+    다른 확장자를 올릴 수 있음.
+
+    source 태그의 type 속성은 입력하지 않아도 되지만,
+    type 속성을 입력하지 않으면 음악파일을 받아 트래픽 낭비가 됨으로
+    입력하는 것을 추천
+-->

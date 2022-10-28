@@ -1,0 +1,21 @@
+<!--
+    웹 브라우저마다 표시되는 video 태그의 형태가 일관되지 않으므로 디자인할 떄 문제
+    video.js 플러그인으로 해결
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://vjs.zencdn.net/7.2.3/video-js.css" />
+    <script src="https://vjs.zencdn.net/7.2.3/video.js"></script>
+  </head>
+  <body>
+    <video controls width="640" height="360" class="video-js" data-setup="{}">
+      <source src="/video/Wildlife.mp4" type="video/mp4" />
+      <source src="/video/Wildlife.webm" type="video/webm" />
+    </video>
+  </body>
+</html>
