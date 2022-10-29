@@ -1,0 +1,38 @@
+<!--압력양식은 사용자에게 입력받는 공간을 의미-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <input type="text" name="search" />
+      <input type="submit" />
+    </form>
+    <form method="get">
+      <input type="text" name="search" />
+      <input type="submit" />
+    </form>
+    <form method="post">
+      <input type="text" name="search" />
+      <input type="submit" />
+    </form>
+  </body>
+</html>
+
+<!--
+    form 태그의 속성
+    action 속성: 입력 데이터의 전달 위치를 지정
+    method 속성: 입력 데이터의 전달 방식을 선택
+    
+    정보는 form 태그에 지정된 action 속성의 장소로 method 속성에 적힌 방식으로 전달
+
+    GET방식은 주소에 데이터를 입력해서 보내는 방식
+    주소에 데이터를 입력하므로 크기가 한정되어 있음
+
+    POST반식은 주소가 변경되지 않고 비밀스럽게 데이터를 전달하는 방식
+    별도로 택배로 붙여 데이터를 전송하는 방식이라 데이터 용량의 제한이 없음
+-->
