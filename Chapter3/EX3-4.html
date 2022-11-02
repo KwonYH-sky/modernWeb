@@ -1,0 +1,55 @@
+<!--태그 선택자는 HTML 페이지 내부에서 특정 종류의 태그를 모두 선택할 때 사용하는 선택자-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*h1 태그의 color 속성에 red 키워드 적용*/
+      h1 {
+        color: red;
+      }
+      /*p 태그의 color 속성애 blue 키워드 적용*/
+      p {
+        color: blue;
+      }
+      /*
+        body 태그, p 태그, h1 태그, h2 태그, h3 태그, h4 태그, h5 태그, h6 태그의
+        margin 속성과 padding 속성에 0를 적용
+      */
+      body,
+      p,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lorem ipsum dolor sit amet</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quasi ipsum
+      molestias eligendi accusantium et sint pariatur similique necessitatibus
+      eius nesciunt iste quibusdam tempora dicta quam atque ducimus laborum
+      adipisci?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda,
+      maxime autem quidem dolorum excepturi voluptatibus impedit dicta
+      reprehenderit. Illo assumenda fuga doloribus! Eius delectus maxime
+      consequatur quod ad praesentium!
+    </p>
+  </body>
+</html>
+
+<!--
+    여러 개의 선택자를 한꺼번에 선택해서 스타일 속성을 적용할 때는 쉼표를 사용한다.
+    태그 선택자 이외도 모든 선택자에 적용 가능하다.
+-->

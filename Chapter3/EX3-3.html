@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script>
+      /*웹 페이지가 모두 준비되면 */
+      $(document).ready(function () {
+        /*모든 태그의 border 속성에 5px solid black을 적용 */
+        $("*").css("border", "5px solid black");
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Lorem ipsum dolor</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quam
+      vero, quasi, assumenda placeat cumque fugiat natus exercitationem vel
+      doloribus aspernatur perspiciatis ipsam dolores repellendus impedit
+      commodi voluptate hic nemo!
+    </p>
+  </body>
+</html>
+
+<!--
+    전체 선택자를 사용하면 
+    html 태그를 포함해 head 태그, title 태그, style 태그까지 선택한다.
+-->
