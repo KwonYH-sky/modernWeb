@@ -1,0 +1,58 @@
+<!--
+    아이디 선택자와 클래스 선택자는 스타일시트에서 가장 많이 사용하는 선택자
+    웹 페이지의 레이아웃을 구성하고 디자인을 적용할 때 사용되는 태그
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*id 속성값으로 header를 가지는 태그의 스타일을 지정*/
+      #header {
+        width: 800px;
+        margin: 0 auto;
+        background: red;
+      }
+
+      #wrap {
+        width: 800px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+
+      #aside {
+        width: 600px;
+        float: left;
+        background: blue;
+      }
+      #content {
+        width: 600px;
+        float: left;
+        background: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <h1>Header</h1>
+    </div>
+    <div id="wrap">
+      <div id="aside">
+        <h1>Aside</h1>
+      </div>
+      <div id="content">
+        <h1>Content</h1>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!--
+    #아이디 / 아이디 속성을 가지고 있는 태그를 선택
+
+    웹 표준에 "id 속성은 웹 페이지 내부에서 중복되면 안된다"라는 규정이 있으므로
+    아이디 선택자는 특정한 하나의 태그를 선택할 때 사용한다.
+-->

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*li 태그 중 class 속성값으로 select를 가지는 태그의 color 속성를 red 키워드 적용*/
+      li.select {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="select">Lorem ipsum</h1>
+    <ul>
+      <li class="select">Lorem, ipsum dolor sit amet</li>
+      <li>Lorem, ipsum dolor sit amet</li>
+      <li>Lorem, ipsum dolor sit amet</li>
+      <li>Lorem, ipsum dolor sit amet</li>
+    </ul>
+  </body>
+</html>
+
+<!--
+    id 속성은 웹 페이지 내부에서 중복되지 않으므로 상관없지만 class 속성은 중복 될 수 있다.
+    class 속성이 서로 다른 테그에 사용된다면 태그 선택자와 클래스 선택자를 함계
+    사용해 더 정확하게 태그를 선택
+-->
