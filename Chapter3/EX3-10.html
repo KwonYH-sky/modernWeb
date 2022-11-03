@@ -1,0 +1,32 @@
+<!-- 
+    속성 선택자를 사용하면 특정 속성을 가진 HTML 태그를 선택 할 수 있다.
+    기본 속성 선택자와 문자열 속성 선택자로 나위며 기본 속성 선택자는 많이 사용하지만
+    문자열 속성 선택자는 특별한 경우에만 사용 
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input[type="text"] {
+        background: red;
+      }
+      input[type="password"] {
+        background: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <input type="text" />
+      <input type="password" />
+    </form>
+  </body>
+</html>
+<!-- 
+    선택자[속성]/ 특정한 속성이 있는 태그를 선택
+    선택자[속성=값][속성=값] / 특정한 속성 안의 값이 특정 값과 같은 문서 객체를 선택 
+-->
