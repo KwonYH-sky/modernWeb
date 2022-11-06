@@ -1,0 +1,38 @@
+<!-- 
+    동위 선택자는 동위 관계에서 뒤에서 위치한 태그를 선택할 때 사용하는 선택자 
+    동위 선택자를 사용하면 동위 상태에 있는 태그의 위치 관계를 파악할 수 있다.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* h1 태그 바로 뒤에 위치하는 h2 태그의 color 속성에 red 키워드를 적용한다. */
+      h1 + h2 {
+        color: red;
+      }
+      /* h1 태그 뒤에 위치하는 h2 태그의
+        background-color 속성에 orange 키워드를 적용한다. */
+      h1 ~ h2 {
+        background: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Header - 1</h1>
+    <h2>Header - 2</h2>
+    <h2>Header - 2</h2>
+    <h2>Header - 2</h2>
+    <h2>Header - 2</h2>
+  </body>
+</html>
+
+<!-- 
+    선택자A + 선택자B / 선택자A 바로 뒤에 위치하는 선택자B를 선택한다.
+    선택자A ~ 선택자B / 선택자A 뒤에 위치하는 선택자B를 선택한다.
+
+    CSS3 애니메이션을 사용해 동적으로 움직이는 레이아웃을 구성할 때 동위선택자를 사용
+ -->

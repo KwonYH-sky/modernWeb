@@ -1,0 +1,48 @@
+<!-- 상태 선택자느 입력 양식의 상태를 선태할 때 사용하는 선택자 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* input 태그가 사용 가능할 경우에
+        background-color 속성에 white 키워드 적용 */
+      input:enabled {
+        background-color: white;
+      }
+
+      /* input 태그가 사용 불가능할 경우에
+        background-color 속성에 gray 키워드 적용 */
+      input:disabled {
+        background-color: gray;
+      }
+
+      /* input 태그가 초점이 맞춰진 경우에
+        background-color 속성에 orange 키워드 적용 */
+      input:focus {
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Enabled</h2>
+    <input />
+    <h2>Disabled</h2>
+    <input disabled="disabled" />
+  </body>
+</html>
+
+<!-- 
+    :checked / 체크 상태의 input 태그를 선택
+    :focus / 초점이 맞추어진 input 태그를 선택
+    :enabled / 사용 가능한 input 태그를 선택
+    :disabled / 사용 불가능한 input 태그를 선택
+
+    checked 상태는 type 속성값이 checkbox 또는 radio인 input 태그가 선택된 상태를 의미한다.
+    focus 상태는 사용자가 초점을 맞추고 있는 입력 양식에 적용되는 상태이며
+    웹 페이지 하나당 하나의 input 태그에만 초점을 맞출 수 있다.
+    enabled 상태는 input 태그가 사용 가능한 상태를 나타내고
+    disabled 상태는 input 태그가 사용 불가능한 상태를 나타낸다.
+ -->
