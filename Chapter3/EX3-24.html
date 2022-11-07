@@ -1,0 +1,42 @@
+<!-- 
+    문자 가상 요소 선택자는 태그 내부 특정 조건의 문자를 선택하는 선택자 
+    문자 선택자는 가상 요소 선택자로 기호 ::를 사용하는 것이 표준
+-->
+<!-- 시작 문자 선택자는 태그 내부의 첫 번째와 첫 번째 줄을 선택할 때 사용하는 선택자 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p::first-letter {
+        font-size: 3em;
+      }
+      p::first-line {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lorem ipsum dolor sit amet</h1>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus
+      saepe et accusamus! Voluptatem fugit repellendus natus aliquam deserunt
+      aperiam officiis eos quam totam blanditiis culpa, sunt eius id fugiat
+      aspernatur!
+    </p>
+    <p>
+      Aorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
+      repudiandae consequuntur ducimus reiciendis excepturi odit aspernatur
+      ipsam iure corrupti, omnis dolores adipisci aut dolore amet id temporibus
+      nemo consequatur! Molestias.
+    </p>
+  </body>
+</html>
+
+<!-- 
+    ::first-letter / 첫 번째 글자를 선택
+    ::first-line / 첫 번째 줄을 선택
+ -->

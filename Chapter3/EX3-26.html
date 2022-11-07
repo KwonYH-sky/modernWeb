@@ -1,0 +1,38 @@
+<!-- 
+    웹 표준에 따르면 각각의 태그에 지정된 속성 이외의 것을 사용하면 안 된다. 
+    하지만 속성 앞에 문자열 data-를 붙이면 사용자 지정 속성으로 인정해준다.
+    웹과 관련된 기술을 접할수록 사용자 지정 속성은 굉장히 많이 사용된다.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css"
+    />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
+  </head>
+  <body>
+    <div data-role="page">
+      <div data-role="header" data-theme="b">
+        <h1>HTML5</h1>
+      </div>
+      <div data-role="content">
+        <ul data-role="listview">
+          <li data-role="list-divider">HTML5</li>
+          <li>Multimedia</li>
+          <li>Connectivity</li>
+          <li>Device Access</li>
+          <li data-role="list-divider">CSS3</li>
+          <li>Animation</li>
+          <li>3D Transform</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

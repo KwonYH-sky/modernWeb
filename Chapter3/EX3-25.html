@@ -1,0 +1,46 @@
+<!-- 전후 문자 선택자는 특정 태그의 전후에 위치하는 공간을 선택하는 선택자 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        counter-increment: rint;
+      }
+      p::before {
+        content: counter(rint) ".";
+      }
+      p::after {
+        content: " - " attr(data-page) " page";
+      }
+      p::first-letter {
+        font-size: 3em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lorem, ipsum dolor sit amet</h1>
+    <p data-page="52">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, repellendus
+      officiis provident quasi ipsum nam delectus consequuntur? Commodi
+      doloremque quo iste officia quos non, voluptate, quod, veritatis illo
+      sequi voluptatibus.
+    </p>
+    <p data-page="273">
+      adipisicing elit. Nam quam accusamus sequi quibusdam cupiditate illum
+      asperiores aspernatur nesciunt a iure minima repellendus, soluta iste
+      nobis dolores excepturi. Minima, nihil sequi?
+    </p>
+  </body>
+</html>
+
+<!-- 
+    ::after / 태그 뒤에 위치라는 공간을 선택
+    ::before / 태그 앞에 위치하는 공간을 선택
+
+    전후 문자 선택자에는 content 속성을 사용할 수 있다.(다른 선택자에는 content 속성을 사용할 수 없음)
+    잘 사용하지 않는 속성이다.
+ -->
