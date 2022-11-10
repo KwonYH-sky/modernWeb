@@ -1,0 +1,46 @@
+<!-- box-sizing 속성은 width 속성과 height 속성이 차지하는 범위를 지정 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        margin: 10px;
+        padding: 10px;
+        width: 100px;
+        height: 100px;
+        border: 10px solid black;
+      }
+
+      div:first-child {
+        background: red;
+        box-sizing: content-box;
+      }
+
+      div:last-child {
+        background: orange;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <div></div>
+  </body>
+</html>
+
+<!-- 
+    content-box 키워드는 기본으로 적용되는 키워드다
+    해당 키워드를 적용하면 width 속성과 height 속성이 글자가 들어가는 영역의 크기를 지정하게 됨
+    따라서 다음과 같은 공식으로 표기
+    박스 너비 = width + 2 x (margin + border + padding)
+    박스 높이 = height + 2 x (margin + border + padding)
+
+    border-box 키워드는 width 속성과 height 속성이 테두리를 포함한 영역의 크기를 지정
+    따라서 다음과 같은 공식으로 표기
+    박스 너비 = width + 2 x margin 
+    박스 높이 = height + 2 x margin 
+ -->
