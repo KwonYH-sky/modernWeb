@@ -1,0 +1,25 @@
+<!-- border-radius 속성을 사용하면 테두리가 둥근 사각형 또는 원을 만들 수 있다.
+해당 속성이 추가되기 이전엔 테두리가 둥근 이미지를 사용했다. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        border: thick dashed black;
+        /* border-radius: 20px; */
+
+        /* border-radius: 왼쪽위 오른쪽위 오른쪽아래 왼쪽아래 */
+        border-radius: 50px 40px 20px 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h1>Lorem ipsum dolor sit amet</h1>
+    </div>
+  </body>
+</html>

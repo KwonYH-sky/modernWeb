@@ -1,0 +1,33 @@
+<!-- border-width 속성과 border-style 속성 -->
+<!-- border-width 속성은 테두리의 너비를 지정하는 스타일 속성 
+    크기단위 또는 다른 키워드를 사용 -->
+<!-- border-style 속성은 테두리의 형태를 지정하는 속성 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        border-width: thick;
+        border-style: dashed;
+        border-color: black;
+
+        /* 위 내용을 아래 처럼도 사용가능 */
+        border: thick dashed black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h1>Lorem ipsum dolor sit amet</h1>
+    </div>
+  </body>
+</html>
+
+<!-- 
+    border 속성은 
+    margin 속성과 padding 속성처럼 left, top, right, bottom 부분의 값을 적용할 수 있다.
+ -->

@@ -1,0 +1,28 @@
+<!-- background-image 속성은 배경에 넣을 그림을 지정하는 스타일 속성
+URL 단위 또는 그레이디언트 등을 입력한다. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-image: url(/image/BackgroundFront.png),
+          url(/image/BackgroundBack.png);
+        background-size: 100% 250px;
+      }
+    </style>
+  </head>
+  <body></body>
+</html>
+
+<!-- 
+    background-size 속성은 배경 이미지 크기를 조절할 때 사용
+    background-size 속성의 두 번째 위치에 크기 단위를 적용하면 높이를 의미
+    속성에 숫자를 띄어쓰기로 구분하는 것과 쉼표로 구분하는 것은 다르다.
+    쉼표를 사용하면 각각의 배경에 서로 다른 크기를 적용하는 것으로 인식한다.
+
+    즉, 쉼표를 사용하면 background-image의 각각 url 키워드에 적용
+-->

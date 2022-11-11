@@ -1,0 +1,58 @@
+<!-- background 속성에 모든 속성에 한번에 사용할 수 있다. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        /* background-color: #e7e7e8;
+        background-image: url(/image/BackgroundFront.png),
+          url(/image/BackgroundBack.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: bottom; */
+
+        background: url(/image/BackgroundFront.png) bottom / 100% no-repeat
+            fixed,
+          url(/image/BackgroundBack.png) bottom/ 100% no-repeat fixed #e7e7e8;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lorem ipsum dolor, sit amet</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum cupiditate
+      possimus adipisci dolorem tempora obcaecati? Enim consequatur quibusdam
+      accusamus ducimus sit eius a, aut eos ea libero, dignissimos quis
+      cupiditate.
+    </p>
+    <p>
+      Consectetur adipisicing elit. Dignissimos quidem quod eaque earum!
+      Mollitia excepturi molestiae debitis natus eligendi commodi quae doloribus
+      ducimus optio non facere, sit incidunt vitae repudiandae!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium non
+      eius vitae est sed velit repellendus saepe! Odio inventore eligendi quo
+      ducimus vel. Sapiente, corporis qui similique modi provident libero.
+    </p>
+    <p>
+      Amet consectetur adipisicing elit. Dolores, dolore voluptatem voluptas
+      blanditiis reprehenderit enim dignissimos vitae sapiente reiciendis rem
+      vel velit ut nobis ea porro eligendi, aspernatur dolor fugiat?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad aperiam
+      nostrum esse nihil libero officiis optio atque quam perspiciatis id
+      excepturi voluptatibus, dignissimos neque saepe, quae harum, impedit
+      exercitationem repellat?
+    </p>
+  </body>
+</html>
+
+<!-- 하지만 배경 속성을 한 줄로 쓰면 너무 복잡해진다.
+    용량을 줄이려는 특별한 목적이 아니면 사용하기를 지양하자 -->

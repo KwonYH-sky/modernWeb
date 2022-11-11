@@ -1,0 +1,25 @@
+<!-- background-repeat 속성은 벼경 이미지 패턴을 조정하는 속성
+기본 키워드가 repeat이므로 여러 패턴이 출력됨. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-image: url(/image/BackgroundFront.png),
+          url(/image/BackgroundBack.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+      }
+    </style>
+  </head>
+  <body></body>
+</html>
+<!-- 
+    repeat 키워드를 적용하면 이미지가 패턴을 이루고
+    repeat-x 키워드를 적용하면 X축 방향으로 이미지가 반복
+    repeat-y 키워드를 적용하면 Y축 방향으로 이미지가 반복
+ -->
