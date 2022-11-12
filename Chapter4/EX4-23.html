@@ -1,0 +1,55 @@
+<!-- line-height 속성은 글자의 높이를 지정한다. -->
+<!-- 현대의 HTML 페이지는 문서 형태보다 애플리케이션 형태로 사용하므로
+글자의 높이를 지정하는 기능보다 글자를 수직 중앙 정렬할 때 사용한다. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .font_big {
+        font-size: 2em;
+      }
+      .font_italic {
+        font-style: italic;
+      }
+      .font_bold {
+        font-weight: bold;
+      }
+      .font_center {
+        text-align: center;
+      }
+
+      .button {
+        width: 150px;
+        height: 70px;
+        background-color: #ff6a00;
+        border: 10px solid #ffffff;
+        border-radius: 30px;
+        box-shadow: 5px 5px 5px #a9a9a9;
+      }
+      .button > a {
+        display: block;
+        /* 글자를 감싸는 박스의 높이와 같은 크기의 line-height 속성을 사용 */
+        line-height: 70px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="button">
+      <a href="#" class="font_big font_italic font_bold font_center">Click</a>
+    </div>
+  </body>
+</html>
+
+<!-- 
+    line-height 속성에 글자를 감싸는 박스의 높이와 같은 크기인 70픽셀을 적용하면 
+    글자가 수직으로 중앙정렬이 된다.
+    자주 사용됨
+
+    font 속성으로 한꺼번에 적용 할 수 있다.
+    각각의 속성을 font-style font-weight font-size / line-height font-family 형태로 입력해야한다.
+    font-size 속성과 line-height 속성 사이에는 / 문자를 입력해야함으로 주의
+ -->

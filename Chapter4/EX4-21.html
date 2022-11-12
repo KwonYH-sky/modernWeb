@@ -1,0 +1,31 @@
+<!-- font-family 속성은 폰트를 지정하는 스타일 속성 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .font_arial {
+        font-family: "없는 폰트", sans-serif;
+      }
+      .font_roman {
+        font-family: "없는 폰트", serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="font_arial">Lorem ipsum</h1>
+    <p class="font_roman">Lorem ipsum</p>
+  </body>
+</html>
+
+<!-- 
+    폰트가 설치 되어 있지 않을 경우를 대비해 font-family 속성을 여러 개 사용한다.
+    사용자의 컴퓨터에서 차례대로 찾아 출력한다.
+
+    일일이 무슨 폰트있는지 확인 할 수 없기에 font-family 속성의 가장 마지막 폰트에는
+    Serif 폰트(명조체), Sans-serif 폰트(고딕체), Mono space 폰트(고정폭 글꼴)를 적용한다
+    위 폰트는 웹 브라우저에서 지정하는 폰트로 generic-family 폰트라고 부른다.
+ -->
