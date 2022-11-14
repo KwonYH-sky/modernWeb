@@ -1,0 +1,59 @@
+<!-- position 속성 -->
+<!-- 
+    상대 위치 좌표를 사용할 땐 static 키워드나 relative 키워드를 사용
+    static 키워드를 적용하면 태그가 "위에서 아래"로와 "왼쪽에서 오른쪽으로" 순서에 맞게 배치
+    (direction 속성을 사용해 "오른쪽에서 왼쪽으로" 변경할 수 있음)
+    relative 키워드를 적용하면 static 키워드로 초기 위치가 지정된 상태에서 상하좌우로 이동할 수 있음
+    절대 위치 좌표를 사용할 땐 absolute 키워드 또는 fixed 키워드 적용
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+      }
+      .red {
+        background-color: red;
+        left: 10px;
+        top: 10px;
+      }
+      .green {
+        background-color: green;
+        left: 50px;
+        top: 50px;
+      }
+      .blue {
+        background-color: blue;
+        left: 90px;
+        top: 90px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box red"></div>
+    <div class="box green"></div>
+    <div class="box blue"></div>
+  </body>
+</html>
+<!-- 
+    position 속성에 사용할 수 있는 키워드
+    static / 태그가 위에서 아래로 순서대로 배치
+    relative / 초기 위치 상태에서 상하좌우로 위치를 이동
+    absolute / 절대 위치 좌표를 설정
+    fixed / 화면을 기준으로 절대 위치 좌표를 설정
+
+    position 속성과 함께 사용하는 스타일 속성
+    top 속성
+    bottom 속성
+    left 속성
+    right 속성
+
+    기본으로 HTML 페이지의 뒤에 입력한 태그가 상위에 올라간다.
+ -->
