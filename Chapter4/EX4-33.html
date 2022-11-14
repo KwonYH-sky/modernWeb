@@ -1,0 +1,75 @@
+<!-- float 속성을 사용한 레이아웃 구성 -->
+<!-- 자손에 float 속성을 적용하면 부모의 overflow 속성에 hidden 키워드를 적용 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* body 태그를 중앙 정렬 */
+      body {
+        width: 960px;
+        margin: 0 auto;
+        /* 태그에 width속성을 사용하고 
+        margin-left 와 margin-right에 auto 키워드 적용하면 자동으로 중앙정렬 */
+      }
+      #aside {
+        width: 200px;
+        float: left;
+      }
+      #selection {
+        width: 760px;
+        float: left;
+      }
+      #wrap {
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header"><h1>Header</h1></div>
+    <div id="navigation"><h1>Navigation</h1></div>
+    <div id="wrap">
+      <div id="aside">
+        <h1>Aside</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+          vitae quas minima incidunt blanditiis minus doloremque aliquid ipsum
+          atque architecto neque aspernatur, perferendis dolores nobis vel
+          aperiam nam doloribus dicta.
+        </p>
+      </div>
+      <div id="section">
+        <h1>Section</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum quas
+          minus numquam minima inventore, architecto ipsum laboriosam placeat
+          cupiditate odit exercitationem nemo assumenda aliquam mollitia
+          delectus! Dolore laborum fuga quibusdam. Lorem ipsum dolor sit, amet
+          consectetur adipisicing elit. Deleniti asperiores, quibusdam eveniet,
+          blanditiis sed quam magnam vero fugit aliquam perspiciatis beatae!
+          Minus, inventore. Quae commodi laudantium rerum obcaecati quaerat
+          pariatur? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Inventore nam quo earum quod porro, ab quisquam molestiae aspernatur
+          et repudiandae consequatur dicta fugit dolorum voluptatibus quas alias
+          totam deserunt. Nostrum?
+        </p>
+      </div>
+    </div>
+    <div id="footer"><h1>Footer</h1></div>
+  </body>
+</html>
+
+<!-- 
+  #wrap 태그 내부의 요소(#aside와 #section 태그)에 float 속성을 사용함으로
+  #footer 태그의 글자 위에 #wrap 태그 내부의 요소가 부요하는 것이다.
+  부유를 막을 때는 float 속성을 
+  사용한 태그의 부모에 overflow 속성을 사용하고 hidden 키워드를 적용한다.
+
+  #footer 태그의 clear 속성에 both 키워드를 적용해도 마찬가지 기능을 수행 할 수 있다.
+  하지만 현대에는 overflow 속성을 더 많이 사용한다.
+
+  이 방법을 One True Layout 방식이라고 부른다.
+ -->
