@@ -1,0 +1,85 @@
+<!-- 그레이디언트는 2가지 이상의 색상을 혼합해서 채색하는 기능 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        font-family: "Times New Roman";
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+
+        /* Old browsers */
+        background: #f85032;
+        /* FF3.6+ */
+        background: -moz-linear-gradient(
+          top,
+          #f85032 1%,
+          #f16f5c 50%,
+          #f6290c 51%,
+          #e73827 100%
+        );
+        /* Chrome, Safari4+ */
+        background: -webkit-gradient(
+          linear,
+          left top,
+          left bottom,
+          color-stop(1%, #f85032),
+          color-stop(50%, #f16f5c),
+          color-stop(51%, #f6290c),
+          color-stop(100%, #e73827)
+        );
+        /* Opera 11.10+ */
+        background: -o-linear-gradient(
+          top,
+          #f85032 1%,
+          #f16f5c 50%,
+          #f6290c 51%,
+          #e73827 100%
+        );
+        /* IE10+ */
+        background: -ms-linear-gradient(
+          top,
+          #f85032 1%,
+          #f16f5c 50%,
+          #f6290c 51%,
+          #e73827 100%
+        );
+        /* W3C */
+        background: linear-gradient(
+          top bottom,
+          #f85032 1%,
+          #f16f5c 50%,
+          #f6290c 1%,
+          #e73827 100%
+        );
+        /* IE6-9 */
+        filter: progid:DXImageTransform.Microsoft.gradient(
+                startColorstr='#f85032', endColorstr='#e73827', GradientType=0
+            );
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>CSS3 Gradient</h1>
+    </div>
+  </body>
+</html>
+
+<!-- 
+    그레이디언트는 Ultimate CSS Gradient Generator와 같은 툴을 사용해 생성하자
+    
+    선형 그레이디언트는 linear-gradient() 함수를 사용하며
+    첫 번째 매개변수에는 선형 그레이디언트가 진행될 각도를 입력하고
+    두 번째 매개변수부터는 색상블록을 입력한다.
+    색상 블록은 왼쪽 위치에 색상 단위를 적용하고 오른쪽에 퍼센트 단위를 적용해 위치를 지정
+
+    linear-gradient(각도, 색상 위치, 색상 위치...)
+
+    원형 그레이디언트를 생성할 때는 radial-gradient() 함수를 사용한다.
+ -->

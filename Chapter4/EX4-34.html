@@ -1,0 +1,61 @@
+<!-- clear:both를 사용한 레이아웃  -->
+<!-- overflow:hidden 외의 방법으로 
+    clear:both 사용하면 float읋 알그러진 레이아웃을 쉽게 초기화 가능  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        width: 960px;
+        margin: 0 auto;
+      }
+      .clear {
+        clear: both;
+      }
+      #aside {
+        float: left;
+        width: 260px;
+      }
+      #section {
+        float: right;
+        width: 700px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header"><h1>Header</h1></div>
+    <div id="navigation"><h1>navigation</h1></div>
+    <div class="clear"></div>
+
+    <div id="aside">
+      <h1>Aside</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nobis
+        nulla a repellendus voluptas dolore sed reiciendis? In vitae modi
+        aperiam excepturi mollitia culpa quisquam, eaque, maiores suscipit
+        assumenda ipsam?
+      </p>
+    </div>
+    <div id="section">
+      <h1>Section</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+        voluptatum accusamus corporis amet sit perspiciatis molestiae ullam sunt
+        quidem consectetur veritatis laborum esse laboriosam accusantium,
+        praesentium repudiandae, dolor odit similique?Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Ullam quos beatae ipsam, deleniti iusto
+        perferendis natus sit voluptate tenetur eligendi sapiente, voluptatem
+        iste non minus explicabo id! Quos, autem incidunt!
+      </p>
+    </div>
+    <div class="clear"></div>
+
+    <div id="footer"><h1>Footer</h1></div>
+    <div class="clear"></div>
+  </body>
+</html>
+<!-- overflow:hidden과의 차이점은 #aside와 #section을 따로 감싸주지 않았다. -->
