@@ -6,6 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chapter_5</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap"
+      rel="stylesheet"
+    />
     <!-- 초기화 -->
     <style>
       * {
@@ -54,11 +60,59 @@
       }
     </style>
     <!-- 타이틀 -->
-    <style></style>
+    <style>
+      #title {
+        font-family: "Rubik Glitch", cursive;
+      }
+    </style>
     <!-- 메뉴(1) -->
-    <style></style>
+    <style>
+      #main_gnb > ul {
+        overflow: hidden;
+      }
+      #main_gnb > ul > li {
+        float: left;
+      }
+      #main_gnb > ul > li > a {
+        display: block;
+        padding: 2px 10px;
+        border: 1px solid black;
+      }
+      #main_gnb > ul > li > a:hover {
+        background: black;
+        color: white;
+      }
+      #main_gnb > ul > li:first-child > a {
+        border-radius: 10px 0 0 10px;
+      }
+      #main_gnb > ul > li:last-child > a {
+        border-radius: 0 10px 10px 0;
+      }
+    </style>
     <!-- 메뉴(2) -->
-    <style></style>
+    <style>
+      #main_lnb > ul {
+        overflow: hidden;
+      }
+      #main_lnb > ul > li {
+        float: left;
+      }
+      #main_lnb > ul > li > a {
+        display: block;
+        padding: 10px 20px;
+        border: 1px solid black;
+      }
+      #main_lnb > ul > li > a:hover {
+        background: black;
+        color: white;
+      }
+      #main_lnb > ul > li:first-child > a {
+        border-radius: 10px 0 0 10px;
+      }
+      #main_lnb > ul > li:last-child > a {
+        border-radius: 0 10px 10px 0;
+      }
+    </style>
     <!-- 콘텐츠 -->
     <style></style>
     <!-- 본문 -->
@@ -106,5 +160,16 @@
     ima 태그에 링크 표시를 제거하기 위해 border: 0을 적용한다.
 
     gnb는 global navigation bar를 의미하고 lnb는 local navigation bar를 의미한다.
+
+    웹 브라우저는 컴퓨터에 설치된 폰트만 사용할 수 있다. 이런 문제를 해결하기 위해
+    웹 폰트를 사용한다. 사용자가 웹 페이지에 접속하는 순간 폰트를 자동으로 내려받고
+    해당 웹 페이지를 사용할 수 있게 만들어 주는 기능이다.
+
+    a 태그에 block 속성을 사용한 이유
+    li 태그에 padding 속성과 border 속성을 사용하면 텍스트 클릭하는거 외엔
+    클릭이 반응하지 않기 때문에 클릭하는 영역을 확장하고자 a 태그에 padding 속성을
+    사용한다. 추가로 padding 속성을 네 방향으로 사용할려면 display 속성에 block 키워드를
+    적용해야한다.
+
 
  -->
