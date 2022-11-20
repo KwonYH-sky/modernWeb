@@ -114,11 +114,87 @@
       }
     </style>
     <!-- 콘텐츠 -->
-    <style></style>
+    <style>
+      #content {
+        /* 중앙 정렬 */
+        width: 960px;
+        margin: 0 auto;
+
+        /* 수평 레이아웃 구성 */
+        overflow: hidden;
+      }
+      #content > #main_section {
+        width: 750px;
+        float: left;
+      }
+      #content > #main_aside {
+        width: 200px;
+        float: right;
+      }
+    </style>
     <!-- 본문 -->
-    <style></style>
+    <style>
+      #main_section > article.main_article {
+        margin-bottom: 10px;
+        padding: 20px;
+        border: 1px solid black;
+      }
+    </style>
     <!-- 사이드 -->
-    <style></style>
+    <style>
+      /* 첫 번째 탭 */
+      input:nth-of-type(1) {
+        display: none;
+      }
+      input:nth-of-type(1) ~ div:nth-of-type(1) {
+        display: none;
+      }
+      input:nth-of-type(1):checked ~ div:nth-of-type(1) {
+        display: block;
+      }
+      /* 두 번째 탭 */
+      input:nth-of-type(2) {
+        display: none;
+      }
+      input:nth-of-type(2) ~ div:nth-of-type(2) {
+        display: none;
+      }
+      input:nth-of-type(2):checked ~ div:nth-of-type(2) {
+        display: block;
+      }
+
+      /* 탭 모양 구성 */
+      section.buttons {
+        overflow: hidden;
+      }
+      section.buttons > label {
+        /* 수평 정렬 */
+        display: block;
+        float: left;
+
+        /* 크기 및 글자 위치 지정 */
+        width: 100px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+
+        /* 테두리 지정 */
+        box-sizing: border-box;
+        border: 1px solid black;
+
+        /* 색상 지정 */
+        background: black;
+        color: white;
+      }
+      input:nth-of-type(1):checked ~ section.buttons > label:nth-of-type(1) {
+        background: white;
+        color: black;
+      }
+      input:nth-of-type(2):checked ~ section.buttons > label:nth-of-type(2) {
+        background: white;
+        color: black;
+      }
+    </style>
     <!-- 목록 -->
     <style></style>
     <!-- 푸터 -->
@@ -149,6 +225,61 @@
         </ul>
       </nav>
     </header>
+    <div id="content">
+      <section id="main_section">
+        <article class="main_article">
+          <h1>Main Article</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+            debitis quisquam maxime aspernatur temporibus deserunt voluptatum
+            quo quidem labore praesentium, recusandae, eos fugit ratione
+            exercitationem perspiciatis nulla incidunt neque ipsam.
+          </p>
+        </article>
+        <article class="main_article">
+          <h1>Main Article</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+            rem, nam non libero quasi ex consequuntur doloremque repudiandae
+            asperiores velit, aliquid laudantium est nemo nobis assumenda cum a!
+            Est, cum?
+          </p>
+        </article>
+        <article class="main_article">
+          <h1>Main Article</h1>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat
+            nisi eligendi illo autem amet blanditiis labore atque iure
+            voluptatibus, mollitia iusto consequuntur quae! Veniam soluta
+            sapiente, eos amet unde error?
+          </p>
+        </article>
+      </section>
+      <aside id="main_aside">
+        <input type="radio" name="tab" id="first" checked="checked" />
+        <input type="radio" name="tab" id="second" />
+        <section class="buttons">
+          <label for="first">First</label>
+          <label for="second">Second</label>
+        </section>
+        <div class="tab_item">
+          <ul>
+            <li><a href="#">HTML5 Canvas</a></li>
+            <li><a href="#">HTML5 Audio</a></li>
+            <li><a href="#">HTML5 Video</a></li>
+            <li><a href="#">HTML5 Semantic Web</a></li>
+          </ul>
+        </div>
+        <div class="tab_item">
+          <ul>
+            <li><a href="#">CSS3 Transition</a></li>
+            <li><a href="#">CSS3 Animation</a></li>
+            <li><a href="#">CSS3 Border</a></li>
+            <li><a href="#">CSS3 Box</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
   </body>
 </html>
 
@@ -170,6 +301,14 @@
     클릭이 반응하지 않기 때문에 클릭하는 영역을 확장하고자 a 태그에 padding 속성을
     사용한다. 추가로 padding 속성을 네 방향으로 사용할려면 display 속성에 block 키워드를
     적용해야한다.
+
+    콘텐츠 서로 간격을 주기 위하여 section과 aside 합이 960px이 아닌 950px이 되게 했다.
+    이로서 서로 간격이 10px이 된다.
+
+    사이드에서 각각 선택자들은
+    input 태그는 보이지 않게 만든다.
+    input 태그가 체크되어 있을 경우에는 뒤에 위치하는 div 태그를 보이게 만든다.
+    input 태그가 체크되어 있지 않을 경우에는 뒤에 위치하는 div 태그를 보이지 않게 만든다.
 
 
  -->
