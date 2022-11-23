@@ -24,9 +24,54 @@
       }
     </style>
     <!-- 헤더 -->
-    <style></style>
+    <style>
+      #main_header {
+        /* 배경 지정 */
+        height: 45px;
+        background: url(/image/header_background.png);
+
+        /* 자손 위치 지정 */
+        position: relative;
+        text-align: center;
+        line-height: 45px;
+      }
+      #main_header > h1 {
+        color: white;
+      }
+      #main_header > a,
+      #main_header > label {
+        display: block;
+        height: 32px;
+        position: absolute;
+      }
+      #main_header > a.left {
+        width: 62px;
+        left: 5px;
+        top: 7px;
+      }
+      #main_header > label.right {
+        width: 32px;
+        right: 5px;
+        top: 7px;
+      }
+    </style>
     <!-- 스프라이트 이미지 -->
-    <style></style>
+    <style>
+      #main_header > a.left {
+        width: 62px;
+        height: 32px;
+        background: url("/image/css_sprites.png") -10px -10px;
+        text-indent: -99999px;
+      }
+      #main_header > label.right {
+        width: 32px;
+        height: 32px;
+        background: url("/image/css_sprites.png") -92px -10px;
+        text-indent: -999999px;
+        /* 태그 내부에 있는 글자를 보이지 않게 만들고자 터무니 없는 값을 적용하여 
+        글자를 화면 밖으로 밀어버리는 코드 */
+      }
+    </style>
     <!-- 토글 목록 -->
     <style></style>
     <!-- 내비게이션(1) -->
@@ -38,5 +83,36 @@
     <!-- 푸터 -->
     <style></style>
   </head>
-  <body></body>
+  <body>
+    <input type="checkbox" id="toggle" />
+    <div id="wrap">
+      <header id="main_header">
+        <a href="#" class="left">Main</a>
+        <h1>Mobile</h1>
+        <label for="toggle" class="right">Toggle</label>
+      </header>
+    </div>
+  </body>
 </html>
+
+<!-- 
+    #wrap 태그는 일반적으로 가장 외곽에 만드는 태그를 뜻한다.
+    #wrap 태그는 body 태그에 스타일을 적용하는 것이 위험할지도 모른다고 생각하는 성향의 개발자가
+    많이 사용한다.(그 이외에 서버와 관련된 내용 중 레이아웃 페이지 또는 마스터 페이지를 사용할 때
+    코드를 정리하려고 사용하는 경우도 있다.)
+    특별한 경우를 제외하고 HTML 페이지 내부에 html 태그와 body 태그가 이미 두 겹이나 선언되어 있으므로
+    사용하지 않아도 된다.
+    하지만 해당 경우는 특별한 목적때문에 사용되었음.
+    일부 스마트폰 웹 브라우저는 ~ 선택자를 사용할 수 없기 때문이다.
+    따라서 토글 대상이 되는 div 태그를 선택하려면 이렇게 #wrap 태그를 만들고 조금 더 복잡한 
+    선택자를 사용해야 한다.
+    대부분의 안드로이드 스마트폰은 CSS3 그레이디언트를 지원하지 않기 때문에
+    이미지를 사용해 배경 그레이디언트를 적용한다.
+
+    스프라이트 이미지는 이미지를 여러 개 뭉쳐놓은 것을 의미한다.
+    이미지를 1개의 파일에 뭉쳐놓으면서 웹 페이지 요청 시간을 줄이고 쉽게 관리 할 수 있다.
+    스프라이트 이미지는 수작업으로도 만들 수 있지만 일반적으로 프로그램을 사용한다.
+    CSS Sprites Generator라는 무료 사이트를 이용하면 좋다.
+    text-indent 속성을 사용하는 이유는 HTML 코드를 나중에 볼 때 해당 태그가 어떠한 태그인지
+    쉽게 알고자 글자를 입력해 화면 밖으로 밀어낸 것이다.
+ -->
