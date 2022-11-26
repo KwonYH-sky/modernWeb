@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- 태블릿 PC도 뷰포트가 meta 태그가 필요하다. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 7</title>
+    <!-- 초기화 -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: Helvetica, sans-serif;
+        min-width: 760px;
+      }
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+    </style>
+    <!-- 헤더 -->
+    <style>
+      #main_header {
+        height: 60px;
+        line-height: 60px;
+        padding-left: 10px;
+        border-bottom: 1px solid black;
+
+        background: #1d4088;
+        color: white;
+      }
+    </style>
+    <!-- 내비게이션 -->
+    <style>
+      #main_gnb {
+        overflow: hidden;
+        border-bottom: 1px solid black;
+        background: #32394a;
+      }
+      #main_gnb > ul.left {
+        overflow: hidden;
+        float: left;
+      }
+      #main_gnb > ul.right {
+        overflow: hidden;
+        float: right;
+      }
+      #main_gnb > ul.left > li {
+        float: left;
+      }
+      #main_gnb > ul.right > li {
+        float: left;
+      }
+      /* a 태그 설정 */
+      #main_gnb a {
+        /* 레이아웃 설정 */
+        display: block;
+        padding: 10px 20px;
+
+        /* 색상 설정 */
+        border-left: 1px solid #5f6673;
+        border-right: 1px solid #242a37;
+        color: white;
+        font-weight: bold;
+      }
+    </style>
+    <!-- 콘텐츠 -->
+    <style>
+      #wrap {
+        overflow: hidden;
+      }
+      #wrap > #main_lnb {
+        float: left;
+        width: 200px;
+      }
+      #wrap > #content_wrap {
+        float: left;
+        width: 100%;
+        *width: 99.9%;
+        margin-right: -200px;
+      }
+      #wrap > #content_wrap > #content {
+        padding-right: 200px;
+      }
+    </style>
+    <!-- 수직목록 -->
+    <style>
+      #wrap {
+        background: #71b1d1;
+      }
+      #main_lnb > ul > li > a {
+        display: block;
+        height: 40px;
+        line-height: 40px;
+        padding-left: 15px;
+
+        border-top: 1px solid #69d6f6;
+        border-bottom: 1px solid #6298b2;
+        color: white;
+        font-weight: bold;
+      }
+    </style>
+    <!-- 본문 -->
+    <style>
+      #content {
+        background: white;
+        border-left: 1px solid black;
+      }
+      article {
+        padding: 10px;
+      }
+    </style>
+    <!-- 푸터 -->
+    <style></style>
+  </head>
+  <body>
+    <header id="main_header">
+      <h1>Fluid</h1>
+    </header>
+    <nav id="main_gnb">
+      <ul class="left">
+        <li><a href="#">Button</a></li>
+        <li><a href="#">Button</a></li>
+        <li><a href="#">Button</a></li>
+        <li><a href="#">Button</a></li>
+        <li><a href="#">Button</a></li>
+        <li><a href="#">Button</a></li>
+      </ul>
+      <ul class="right">
+        <li><a href="#">Button</a></li>
+        <li><a href="#">Button</a></li>
+      </ul>
+    </nav>
+    <div id="wrap">
+      <nav id="main_lnb">
+        <ul>
+          <li><a href="#">Button</a></li>
+          <li><a href="#">Button</a></li>
+          <li><a href="#">Button</a></li>
+          <li><a href="#">Button</a></li>
+          <li><a href="#">Button</a></li>
+        </ul>
+      </nav>
+      <div id="content_wrap">
+        <div id="content">
+          <article>
+            <h1>Lorem ipsum dolor sit amet</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa odit
+              possimus ratione non, expedita ipsam dolores temporibus enim qui
+              fugit maiores, ducimus vero dicta vitae eaque officiis doloribus.
+              Sit, unde. Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Dolorem, sit cum deserunt cupiditate atque vel at odio, ex
+              officia quia explicabo. Itaque consequuntur et unde iure amet
+              voluptatibus soluta consectetur. Lorem, ipsum dolor sit amet
+              consectetur adipisicing elit. Aliquid nihil libero temporibus
+              accusamus molestiae adipisci vitae consectetur exercitationem
+              iusto officia magni, praesentium ipsam deleniti, facere, incidunt
+              suscipit pariatur quod quisquam.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+              consequatur quaerat temporibus eius quod numquam dolorum error.
+              Saepe iusto odio quis, consequatur at minus est fuga cum sapiente
+              assumenda ad! Lorem ipsum dolor sit amet consectetur, adipisicing
+              elit. Fuga, porro! Dolorum nam aut facilis consequatur beatae
+              earum aperiam! Ab cum atque distinctio porro tempora quis
+              repudiandae ut repellendus, voluptas culpa! Praesent pharetra sem
+              et nibh auctor auctor adipiscing augue rutrum. Ut sapien quam,
+              bibendum eget malesuada non, porta sed ligula. Donec interdum
+              suscipit mattis. Praesent dictum odio non nisi pharetra
+              pellentesque. Phasellus nec quam sit amet nunc ullamcorper
+              pulvinar nec quis tellus. Pellentesque consectetur tellus ac augue
+              tincidunt luctus. Aenean consectetur, justo vel vestibulum cursus,
+            </p>
+          </article>
+          <article>
+            <h1>Lorem ipsum dolor sit amet</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa odit
+              possimus ratione non, expedita ipsam dolores temporibus enim qui
+              fugit maiores, ducimus vero dicta vitae eaque officiis doloribus.
+              Sit, unde. Lorem ipsum, dolor sit amet consectetur adipisicing
+              elit. Recusandae dolor, magni facere porro id, debitis
+              voluptatibus ratione numquam, consequuntur quo minima. Explicabo
+              qui magni quasi reiciendis sapiente odit nesciunt mollitia? Lorem
+              ipsum dolor sit amet, consectetur adipisicing elit. Aut, ut
+              aliquid. Autem nostrum labore minus aspernatur hic totam molestiae
+              dolor facere eligendi, accusamus, sint consequatur perferendis
+              voluptatem quibusdam ipsum et.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+              consequatur quaerat temporibus eius quod numquam dolorum error.
+              Saepe iusto odio quis, consequatur at minus est fuga cum sapiente
+              assumenda ad! Lorem, ipsum dolor sit amet consectetur adipisicing
+              elit. Eum vel ut aspernatur illum a, porro ex odit maiores ullam
+              recusandae ab cum esse provident perferendis harum iusto, et
+              voluptatibus officia. Lorem ipsum dolor sit amet, consectetur
+              adipisicing elit. Commodi ad odio quam, libero nemo cum facilis
+              unde nesciunt magnam dolore maiores labore ab. Porro nulla enim
+              sequi atque, mollitia nihil. Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Consequuntur aliquam explicabo
+              exercitationem amet, aperiam impedit vitae sunt officia obcaecati
+              quaerat iusto perspiciatis facilis id, est labore quas quisquam?
+              Tenetur, dicta?
+            </p>
+          </article>
+          <article>
+            <h1>Lorem ipsum dolor sit amet</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa odit
+              possimus ratione non, expedita ipsam dolores temporibus enim qui
+              fugit maiores, ducimus vero dicta vitae eaque officiis doloribus.
+              Sit, unde.lo Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Sint rem culpa dolore harum, officiis veniam voluptatem
+              praesentium? Esse dolore quibusdam soluta laudantium natus
+              suscipit, delectus totam. Praesentium fuga odio non!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+              consequatur quaerat temporibus eius quod numquam dolorum error.
+              Saepe iusto odio quis, consequatur at minus est fuga cum sapiente
+              assumenda ad! Praesent pharetra sem et nibh auctor auctor
+              adipiscing augue rutrum. Ut sapien quam, bibendum eget malesuada
+              non, porta sed ligula. Donec interdum suscipit mattis. Praesent
+              dictum odio non nisi pharetra pellentesque. Phasellus nec quam sit
+              amet nunc ullamcorper pulvinar nec quis tellus. Pellentesque
+              consectetur tellus ac augue tincidunt luctus. Aenean consectetur,
+              justo vel vestibulum cursus, risus arcu ornare dolor, nec
+              elementum diam erat ac tortor. Morbi eleifend, erat sit amet
+              posuere pretium, purus dui ullamcorper urna, eu rutrum mi augue
+              tristique odio. Proin commodo mi non nibh interdum ultricies.
+              Donec vitae leo quis ante vestibulum accumsan ut sed nulla.
+              Maecenas ligula orci, fringilla ac elementum eget, congue quis
+              dolor. Cras sagittis rhoncus faucibus.
+            </p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- 
+    화면의 너비를 줄이면 네비게이션 레이아웃이 깨진다
+    일반적으로 이러한 경우에는 반응형 웹을 사용해서 처리한다.
+    하지만 다른 방법으로 너비가 760픽셀이하로 내려가지 않게 한다.
+
+    해당 웹페이지는 화면의 너비가 동적으로 변화할 때 그에 맞게 적응한다.
+
+    어도비 컬러CC
+    색 감각 때문에 샘플 웹 페이지를 개발할 때 힘이 드는 경우 어도비 컬러CC를 사용하면 좋다
+    어도비 컬러CC의 기본 화면에서는 색상환을 돌리며 어울리는 색상을 선택할 수 있다. 
+    사진에서 색조합을 추출할 수도 있다.
+ -->
