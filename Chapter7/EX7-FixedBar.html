@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      /* 전체화면 */
+      html,
+      body {
+        height: 100%;
+      }
+
+      /* 고정 바 생성 */
+      #top_bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 50px;
+        background: red;
+      }
+      #bottom_bar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 50px;
+        background: red;
+      }
+      #left_bar {
+        position: fixed;
+        top: 50px;
+        bottom: 50px;
+        left: 0;
+        width: 50px;
+        background: blue;
+      }
+      #right_bar {
+        position: fixed;
+        top: 50px;
+        bottom: 50px;
+        right: 0;
+        width: 50px;
+        background: blue;
+      }
+      article {
+        padding: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="top_bar">
+      <h1>Top_Bar</h1>
+    </div>
+    <div id="bottom_bar">
+      <h1>Bottom_Bar</h1>
+    </div>
+    <div id="left_bar">
+      <h1>A</h1>
+    </div>
+    <div id="right_bar">
+      <h1>B</h1>
+    </div>
+    <article>
+      <h1>Lorem ipsum dolor</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis vel,
+        aliquid possimus nobis dicta aliquam veniam placeat iste eius pariatur
+        sapiente, nemo dolorum quas necessitatibus reprehenderit sed? Nemo,
+        accusamus nulla.
+      </p>
+      <p>
+        Donec nec molestie erat. Morbi condimentum a neque quis bibendum. Nunc
+        laoreet ex ac eleifend suscipit. Etiam lobortis nibh ut metus semper, at
+        malesuada justo dictum. Curabitur feugiat nisi magna, at convallis ante
+        pharetra laoreet. Donec vel neque pellentesque, aliquet dui eget, semper
+        erat. Aenean eget velit nibh. Fusce interdum auctor lorem eget molestie.
+        Nunc mauris risus, faucibus eget orci non, tempor fermentum ex.
+        Phasellus scelerisque risus a dictum tristique. Proin rutrum, quam vel
+        blandit viverra, elit risus suscipit felis, non mollis felis turpis quis
+        quam.
+      </p>
+      <p>
+        Praesent elementum porttitor augue vitae aliquet. Proin euismod mi ac
+        risus fermentum rutrum. Nam nec ipsum at felis consequat venenatis. Sed
+        malesuada volutpat lorem, eu ultricies sem dignissim in. Suspendisse
+        potenti. Fusce at orci congue ante tempus iaculis quis eget nisi.
+        Maecenas orci nunc, semper ac ipsum sed, volutpat volutpat ipsum.
+        Suspendisse ut fringilla risus, non semper metus. Vestibulum ante ipsum
+        primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis
+        id accumsan est. Fusce mollis nec neque ut viverra. Suspendisse finibus,
+        nulla et semper vehicula, tortor ante suscipit ante, eu varius odio eros
+        a sem.
+      </p>
+      <p>
+        Vestibulum ac interdum tellus. Donec eu tellus accumsan purus egestas
+        fermentum ut facilisis nulla. Pellentesque posuere dictum consectetur.
+        Ut egestas nisi vitae arcu iaculis, ac rutrum tellus egestas. Nam leo
+        nisl, efficitur ac magna a, auctor scelerisque ipsum. Nunc tristique,
+        lectus ac sodales posuere, nibh sapien malesuada eros, tristique feugiat
+        nisi ipsum eget sem. Vestibulum a velit et arcu vestibulum sodales.
+        Curabitur non arcu vel ipsum lobortis elementum et a orci. Interdum et
+        malesuada fames ac ante ipsum primis in faucibus. In non iaculis lacus.
+      </p>
+      <p>
+        Suspendisse sodales, nibh ac laoreet commodo, ipsum ante tincidunt
+        massa, vitae consequat odio lacus nec libero. Maecenas eu lorem id
+        sapien tempus cursus. Class aptent taciti sociosqu ad litora torquent
+        per conubia nostra, per inceptos himenaeos. Curabitur accumsan
+        ullamcorper pretium. Integer a dui mi. Maecenas ullamcorper massa
+        hendrerit viverra hendrerit. Quisque venenatis nibh id orci consequat
+        convallis. Nulla facilisi. Integer venenatis ex quis neque mollis
+        rutrum.
+      </p>
+    </article>
+  </body>
+</html>
+
+<!-- 
+    고정 바를 만들려면 body 태그가 화면에 알맞는 높이를 형성해야한다. 
+    따라서 전체화면를 적용한다. 
+ -->
