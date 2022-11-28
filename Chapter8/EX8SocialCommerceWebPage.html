@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 8</title>
+    <!-- 초기화 -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font: normal 12px "Dotum";
+      }
+      a {
+        text-decoration: none;
+      }
+      img {
+        border: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      body {
+        /* 중앙 정렬 */
+        width: 980px;
+        margin: 0 auto;
+      }
+    </style>
+    <!-- 헤더 -->
+    <style>
+      #main_header {
+        /* 자손의 position 속성에 absolute 적용하면
+            부모의 position 속성에 relative 적용 */
+        position: relative;
+        height: 75px;
+      }
+      #main_header > h1.logo {
+        position: absolute;
+        left: 15px;
+        top: 10px;
+      }
+      #main_header > div.login_menu {
+        position: absolute;
+        top: 10px;
+        right: 0px;
+      }
+    </style>
+    <!-- 사이드 -->
+    <style>
+      body {
+        /* 자손의 position 속성에 absolute 적용하면
+            부모의 position 속성에 relative 적용 */
+        position: relative;
+      }
+      #global_aside {
+        position: absolute;
+        left: 990px;
+        top: 75px;
+        width: 90px;
+      }
+      #global_aside {
+        display: block;
+        margin-bottom: 5px;
+      }
+    </style>
+    <!-- 내비게이션_위 -->
+    <style>
+      #top_gnb {
+        /* 자손 float 속성을 적용하면
+            부모의 overflow 속성에 hidden 키워드를 적용  */
+        overflow: hidden;
+      }
+      #top_gnb > div.menu {
+        float: left;
+        width: 140px;
+        height: 50px;
+        background: url(/image/Chapter8/top_gnb.png);
+      }
+
+      #top_gnb > div.item_1 {
+        background-position: 0px 0px;
+      }
+      #top_gnb > div.item_2 {
+        background-position: 0px -50px;
+      }
+      #top_gnb > div.item_3 {
+        background-position: 0px -100px;
+      }
+      #top_gnb > div.item_4 {
+        background-position: 0px -150px;
+      }
+      #top_gnb > div.item_5 {
+        background-position: 0px -200px;
+      }
+      #top_gnb > div.item_6 {
+        background-position: 0px -250px;
+      }
+      #top_gnb > div.item_7 {
+        background-position: 0px -300px;
+      }
+
+      #top_gnb > div.item_1:hover {
+        background-position: 0px -350px;
+      }
+      #top_gnb > div.item_2:hover {
+        background-position: 0px -400px;
+      }
+      #top_gnb > div.item_3:hover {
+        background-position: 0px -450px;
+      }
+      #top_gnb > div.item_4:hover {
+        background-position: 0px -500px;
+      }
+      #top_gnb > div.item_5:hover {
+        background-position: 0px -550px;
+      }
+      #top_gnb > div.item_6:hover {
+        background-position: 0px -600px;
+      }
+      #top_gnb > div.item_7:hover {
+        background-position: 0px -650px;
+      }
+
+      #top_gnb > div.item_1.active {
+        background-position: 0px -350px;
+      }
+      #top_gnb > div.item_2.active {
+        background-position: 0px -400px;
+      }
+      #top_gnb > div.item_3.active {
+        background-position: 0px -450px;
+      }
+      #top_gnb > div.item_4.active {
+        background-position: 0px -500px;
+      }
+      #top_gnb > div.item_5.active {
+        background-position: 0px -550px;
+      }
+      #top_gnb > div.item_6.active {
+        background-position: 0px -600px;
+      }
+      #top_gnb > div.item_7.active {
+        background-position: 0px -650px;
+      }
+    </style>
+    <!-- 내비게이션_아래 -->
+    <style></style>
+    <!-- 목록 -->
+    <style></style>
+    <!-- 본문 -->
+    <style></style>
+    <!-- 푸터 -->
+    <style></style>
+  </head>
+  <body>
+    <header id="main_header">
+      <h1 class="logo">
+        <a href="#"><img src="/image/Chapter8/title.png" alt="" /></a>
+      </h1>
+      <div class="login_menu">
+        <span><a href="#">로그인</a></span>
+        <span><a href="#">회원가입</a></span>
+        <span><a href="#">고객센터</a></span>
+      </div>
+    </header>
+    <aside id="global_aside">
+      <a href="#"><img src="https://via.placeholder.com/90x160" alt="" /></a>
+      <a href="#"><img src="https://via.placeholder.com/90x160" alt="" /></a>
+      <a href="#"><img src="https://via.placeholder.com/90x160" alt="" /></a>
+      <a href="#"><img src="https://via.placeholder.com/90x160" alt="" /></a>
+      <a href="#"><img src="https://via.placeholder.com/90x160" alt="" /></a>
+      <a href="#"><img src="https://via.placeholder.com/90x160" alt="" /></a>
+      <a href="#"><img src="https://via.placeholder.com/90x160" alt="" /></a>
+      <a href="#"><img src="https://via.placeholder.com/90x160" alt="" /></a>
+      <a href="#"><img src="https://via.placeholder.com/90x160" alt="" /></a>
+      <a href="#"><img src="https://via.placeholder.com/90x160" alt="" /></a>
+    </aside>
+    <nav id="top_gnb">
+      <div class="menu item_1 active"></div>
+      <div class="menu item_2"></div>
+      <div class="menu item_3"></div>
+      <div class="menu item_4"></div>
+      <div class="menu item_5"></div>
+      <div class="menu item_6"></div>
+      <div class="menu item_7"></div>
+    </nav>
+  </body>
+</html>
+
+<!-- 
+    #global_aside 태그에 position 속성에 absolute 키워드 말고 fixed 키둬드를 적용하면 
+    위치를 조정하면 따라다니는 사이드를 만들 수 있다.
+    a 태그의 display 속성에 block 키워드를 적용한 이유는 margin 속성을 사용하기 위함
+
+    nth-child() 속성을 사용해 메뉴 내부의 태그를 구분해도 되나 오래된 브라우저는 nth-child() 선택자를
+    사용할 수 없다. 그러한 경우 클래스 속성을 하나 하나 입력하면 된다.
+ -->
