@@ -143,13 +143,181 @@
       }
     </style>
     <!-- 내비게이션_아래 -->
-    <style></style>
+    <style>
+      #bottom_gnb {
+        overflow: hidden;
+      }
+      #bottom_gnb > div.menu {
+        float: left;
+        width: 98px;
+        height: 80px;
+        background: url(/image/Chapter8/bottom_gnb.png);
+      }
+      #bottom_gnb > div.item_1 {
+        background-position: 0px 00px;
+      }
+      #bottom_gnb > div.item_2 {
+        background-position: 0px -80px;
+      }
+      #bottom_gnb > div.item_3 {
+        background-position: 0px -160px;
+      }
+      #bottom_gnb > div.item_4 {
+        background-position: 0px -240px;
+      }
+      #bottom_gnb > div.item_5 {
+        background-position: 0px -320px;
+      }
+      #bottom_gnb > div.item_6 {
+        background-position: 0px -400px;
+      }
+      #bottom_gnb > div.item_7 {
+        background-position: 0px -480px;
+      }
+      #bottom_gnb > div.item_8 {
+        background-position: 0px -560px;
+      }
+      #bottom_gnb > div.item_9 {
+        background-position: 0px -640px;
+      }
+      #bottom_gnb > div.item_10 {
+        background-position: 0px -720px;
+      }
+
+      #bottom_gnb > div.item_1:hover {
+        background-position: 0px -800px;
+      }
+      #bottom_gnb > div.item_2:hover {
+        background-position: 0px -880px;
+      }
+      #bottom_gnb > div.item_3:hover {
+        background-position: 0px -960px;
+      }
+      #bottom_gnb > div.item_4:hover {
+        background-position: 0px -1040px;
+      }
+      #bottom_gnb > div.item_5:hover {
+        background-position: 0px -1120px;
+      }
+      #bottom_gnb > div.item_6:hover {
+        background-position: 0px -1200px;
+      }
+      #bottom_gnb > div.item_7:hover {
+        background-position: 0px -1280px;
+      }
+      #bottom_gnb > div.item_8:hover {
+        background-position: 0px -1360px;
+      }
+      #bottom_gnb > div.item_9:hover {
+        background-position: 0px -1440px;
+      }
+      #bottom_gnb > div.item_10:hover {
+        background-position: 0px -1520px;
+      }
+
+      #bottom_gnb > div.item_1.active {
+        background-position: 0px -800px;
+      }
+      #bottom_gnb > div.item_2.active {
+        background-position: 0px -880px;
+      }
+      #bottom_gnb > div.item_3.active {
+        background-position: 0px -960px;
+      }
+      #bottom_gnb > div.item_4.active {
+        background-position: 0px -1040px;
+      }
+      #bottom_gnb > div.item_5.active {
+        background-position: 0px -1120px;
+      }
+      #bottom_gnb > div.item_6.active {
+        background-position: 0px -1200px;
+      }
+      #bottom_gnb > div.item_7.active {
+        background-position: 0px -1280px;
+      }
+      #bottom_gnb > div.item_8.active {
+        background-position: 0px -1360px;
+      }
+      #bottom_gnb > div.item_9.active {
+        background-position: 0px -1440px;
+      }
+      #bottom_gnb > div.item_10.active {
+        background-position: 0px -1520px;
+      }
+    </style>
     <!-- 목록 -->
-    <style></style>
+    <style>
+      #detail_list {
+        overflow: hidden;
+        padding: 10px;
+        background: #3b314d;
+      }
+
+      #detail_list > ul {
+        float: left;
+        width: 192px;
+      }
+
+      #detail_list > ul > li {
+        height: 13px;
+        margin-top: 5px;
+        padding: 3px 5px;
+        color: #f3f3f3;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      #detail_list > ul > li.header {
+        padding-left: 15px;
+      }
+      #detail_list > ul > li.header > p {
+        font-weight: bold;
+        color: #48c5ff;
+      }
+    </style>
     <!-- 본문 -->
-    <style></style>
+    <style>
+      #content {
+        margin-top: 10px;
+      }
+      #product_section {
+        overflow: hidden;
+        margin-top: 5px;
+      }
+
+      #product_section > #product_article {
+        float: left;
+        width: 795px;
+      }
+      #product_section > #product_aside {
+        float: right;
+        padding: 5px;
+        padding-top: 0px;
+        width: 170px;
+      }
+      #product_section > #product_article > img {
+        display: block;
+      }
+    </style>
     <!-- 푸터 -->
-    <style></style>
+    <style>
+      #main_footer {
+        height: 40px;
+        padding: 10px;
+        margin-bottom: 10px;
+
+        background: #9c9c9c;
+        border-radius: 5px;
+
+        text-align: center;
+      }
+      #main_footer > h1 {
+        font-size: 1.5em;
+        font-weight: bold;
+      }
+    </style>
   </head>
   <body>
     <header id="main_header">
@@ -183,6 +351,187 @@
       <div class="menu item_6"></div>
       <div class="menu item_7"></div>
     </nav>
+    <nav id="bottom_gnb">
+      <div class="menu item_1"></div>
+      <div class="menu item_2"></div>
+      <div class="menu item_3"></div>
+      <div class="menu item_4"></div>
+      <div class="menu item_5"></div>
+      <div class="menu item_6"></div>
+      <div class="menu item_7"></div>
+      <div class="menu item_8"></div>
+      <div class="menu item_9 active"></div>
+      <div class="menu item_10"></div>
+    </nav>
+    <div id="detail_list">
+      <ul class="column_1">
+        <li class="header"><p>게임용 노트북</p></li>
+        <li>물건 이름</li>
+        <li>물건 이름</li>
+        <li>물건 이름</li>
+        <li class="header"><p>울트라북</p></li>
+        <li>물건 이름</li>
+        <li>물건 이름</li>
+        <li>물건 이름</li>
+        <li>물건 이름</li>
+        <li>물건 이름</li>
+      </ul>
+      <ul class="column_2">
+        <li>물건 이름</li>
+        <li class="header"><p>노트북 가방</p></li>
+        <li>물건 이름</li>
+        <li>물건 이름</li>
+        <li>물건 이름</li>
+        <li class="header"><p>받침대/쿨러</p></li>
+        <li>물건 이름</li>
+        <li>물건 이름</li>
+        <li>물건 이름</li>
+        <li>물건 이름</li>
+      </ul>
+      <ul class="column_3">
+        <li class="header"><p>노트북 보호 용품</p></li>
+        <li>물건 이름</li>
+        <li>물건 이름</li>
+        <li>물건 이름</li>
+        <li>물건 이름</li>
+        <li class="header"><p>맥북</p></li>
+        <li>물건 이름</li>
+        <li>물건 이름</li>
+        <li class="header"><p>노트북 보호 용품</p></li>
+        <li>물건 이름</li>
+      </ul>
+      <ul class="column_4">
+        <li>물건 이름</li>
+        <li>물건 이름</li>
+        <li>물건 이름</li>
+        <li>물건 이름</li>
+        <li>물건 이름</li>
+        <li class="header"><p>노트북 보조 용품</p></li>
+        <li>물건 이름</li>
+        <li>물건 이름</li>
+        <li>물건 이름</li>
+        <li>물건 이름</li>
+      </ul>
+      <ul class="column_5">
+        <li>물건 이름</li>
+        <li>물건 이름</li>
+        <li>물건 이름</li>
+        <li class="header"><p>외장 하드 디스크</p></li>
+        <li>물건 이름</li>
+        <li>물건 이름</li>
+        <li>물건 이름</li>
+        <li>물건 이름</li>
+        <li>물건 이름</li>
+        <li>물건 이름</li>
+      </ul>
+    </div>
+    <div class="content">
+      <figure id="product_image">
+        <img
+          src="https://via.placeholder.com/980x440"
+          alt=""
+          width="980"
+          height="440"
+        />
+      </figure>
+      <section id="product_section">
+        <article id="product_article">
+          <img
+            src="https://via.placeholder.com/795x400"
+            alt=""
+            width="795"
+            height="400"
+          />
+          <img
+            src="https://via.placeholder.com/795x400"
+            alt=""
+            width="795"
+            height="400"
+          />
+          <img
+            src="https://via.placeholder.com/795x400"
+            alt=""
+            width="795"
+            height="400"
+          />
+        </article>
+        <aside id="product_aside">
+          <a href="#"
+            ><img
+              src="https://via.placeholder.com/170x200"
+              alt=""
+              width="170"
+              height="200"
+          /></a>
+          <a href="#"
+            ><img
+              src="https://via.placeholder.com/170x200"
+              alt=""
+              width="170"
+              height="200"
+          /></a>
+          <a href="#"
+            ><img
+              src="https://via.placeholder.com/170x200"
+              alt=""
+              width="170"
+              height="200"
+          /></a>
+          <a href="#"
+            ><img
+              src="https://via.placeholder.com/170x200"
+              alt=""
+              width="170"
+              height="200"
+          /></a>
+          <a href="#"
+            ><img
+              src="https://via.placeholder.com/170x200"
+              alt=""
+              width="170"
+              height="200"
+          /></a>
+          <a href="#"
+            ><img
+              src="https://via.placeholder.com/170x200"
+              alt=""
+              width="170"
+              height="200"
+          /></a>
+          <a href="#"
+            ><img
+              src="https://via.placeholder.com/170x200"
+              alt=""
+              width="170"
+              height="200"
+          /></a>
+          <a href="#"
+            ><img
+              src="https://via.placeholder.com/170x200"
+              alt=""
+              width="170"
+              height="200"
+          /></a>
+          <a href="#"
+            ><img
+              src="https://via.placeholder.com/170x200"
+              alt=""
+              width="170"
+              height="200"
+          /></a>
+          <a href="#"
+            ><img
+              src="https://via.placeholder.com/170x200"
+              alt=""
+              width="170"
+              height="200"
+          /></a>
+        </aside>
+      </section>
+    </div>
+    <footer id="main_footer">
+      <h1>모던 웹 디자인을 위한 HTML5 + CSS3 입문</h1>
+    </footer>
   </body>
 </html>
 
@@ -193,4 +542,18 @@
 
     nth-child() 속성을 사용해 메뉴 내부의 태그를 구분해도 되나 오래된 브라우저는 nth-child() 선택자를
     사용할 수 없다. 그러한 경우 클래스 속성을 하나 하나 입력하면 된다.
+
+    이러한 목록은 원래 서버의 템플릭 엔진을 한 번 실행하면 자동으로 완성된다.
+    
+    img 태그에 display 속성에 block 키워드를 적용한 이유는
+    inline 키워드를 적용하면 img 태그 위 아래 그림 사이에 공간이 생기는데
+    block 키워드를 적용하면 공간이 사라진다.
+
+    div 태그를 사용해 레이아웃을 구성하는 방법은 현대에 가장 많이 사용하는 방법이다.
+    즉 div 태그를 사용하지 않고 레이아웃을 잡는 웹 페이지는 레거시한 셈이다.
+    과거에는 table 태그를 사용햐 래이아웃을 잡았으나 해당 태그를 사용하면 레이아웃을 조금만
+    변경해도 페이지 전체를 들어내야하는 일이 일어나 요즘 사용하지 않는다.
+    지금 만든 상태에서 꼬리말을 추가하고 싶다면 footer 와 같은 태그를 넣으면 된다.
+
+    중요한 것은 레이아웃을 구성하는 방법이다.
  -->
