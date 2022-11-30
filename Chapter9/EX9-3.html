@@ -1,0 +1,97 @@
+<!-- 키 프레임과 애니메이션 속성 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS3 Animation Basic</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        position: relative;
+      }
+      #box {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border-radius: 100px;
+        text-align: center;
+        background: linear-gradient(#cb60b3 0%, #db36a4 100%);
+
+        /* animation-name: rint;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: linear; */
+
+        /* name duration function delay count direct 순서로 입력한다. */
+        animation: rint 2s linear none infinite alternate;
+      }
+      #box > h1 {
+        line-height: 200px;
+      }
+
+      @keyframes rint {
+        from {
+          left: 0;
+          transform: rotate(0deg);
+        }
+        50% {
+          left: 500px;
+        }
+        to {
+          left: 500px;
+          transform: rotate(360deg);
+        }
+      }
+      #box:hover {
+        animation-play-state: paused;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box">
+      <h1>Rotation</h1>
+    </div>
+  </body>
+</html>
+
+<!-- 
+    animation 속성
+    animation / 모든 animation 속성을 한 번에 적용한다.
+    animation-delay / 이벤트 발생 후 몇 초 후에 재생할지 지정한다.
+    animation-direction / 애니메이션 진행 방향을 설정한다.
+    animation-duration / 애니메이션 몇 초 동안 재생할지 지정한다.
+    animation-iteration-count / 애니메이션 반복 횟수를 지정한다.
+    animation-name / 애니메이션 이름을 지정한다.
+    animation-play-state / 애니메이션 재생 상태를 지정한다.
+    animation-timing-function / 수치 변형 함수를 지정한다.
+
+    @keyframes와 같은 형태를 키 프레임 규칙(keyframes @-rule)이라고 부르며 CSS3에서 애니메이션을
+    지정하는 형식이다.
+    키 프레임은 @keyframes 이름 형태로 입력한다.
+    키 프레임 안에는 퍼센트 단위로 애니메이션을 적용한다. 예외적으로 0% 와 100%의 경우는
+    from 키워드와 to 키워드로 사용할 수 있다.
+    애니메이션을 10초로 가정하면 0초, 5초 10초를 from, 50%, to로 지정할 수 있다.
+
+    키 프레임을 생성한 이후에는 animation-name 속성을 사용햐 태그를 키 프레임에 연결한다.
+    애니메이션 속성은 반드시 animation-name 속성과 animation-duration 속성을 사용해야 한다.
+
+    animation-iteration-count 속성은 애니메이션을 특정 횟수만큼 반복하고 싶을 때 사용한다.
+    숫자를 적용하며 적용한 숫자만큼 애니메이션을 반복한다.
+    만약 무한번 반복하고 싶을 때는 infinite 키워드를 적용하면 된다.
+
+    animation-direction 속성은 애니메이션을 반복하는 형태를 지정한다.
+    [animation-direction 속성]
+    alternate / from에서 to로 이동 후 to에서 from으로 이동을 반복한다.
+    normal / 계속 from에서 to로 이동한다.
+
+    animation-play-state 속성은 애니메이션을 중지하고 재생할 때 사용하는 속성이다.
+    일반적으로 animation-play-state 속성은 자바스크립트를 사용해 조절한다.
+
+    animation: <animation-name> <animation-duration> <animation-timing-function> 
+        <animation-delay> <animation-iteration-count> <animation-direction> ..
+            (여러 속성을 적용하고 싶은 경우 순서대로 여러 개를 입력)
+    사용하고 싶지 않는 속성은 none 키워드를 적용한다.
+ -->
