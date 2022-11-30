@@ -1,0 +1,122 @@
+<!-- 변환 속성 -->
+<!-- transition 속성은 다른 스타일 속성을 합쳐 사용하는 것이다. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS3 Transition Basic</title>
+    <style>
+      #graph {
+        width: 610px;
+        border: 3px solid black;
+      }
+      .bar {
+        width: 10px;
+        height: 50px;
+        background-color: orange;
+        margin: 5px;
+
+        /* transition-property: background-color, width;
+        transition-duration: 1s, 5s; */
+        /* property duration function delay 순서대로 입력한다. */
+        transition: background-color 1s ease, width 5s linear 1s;
+      }
+
+      /* #graph:hover > .bar {
+        width: 600px;
+      } */
+      /* transition-delay 속성 */
+      /* .bar:nth-child(1) {
+        transition-delay: 0s;
+      }
+      .bar:nth-child(2) {
+        transition-delay: 1s;
+      }
+      .bar:nth-child(3) {
+        transition-delay: 2s;
+      }
+      .bar:nth-child(4) {
+        transition-delay: 3s;
+      }
+      .bar:nth-child(5) {
+        transition-delay: 4s;
+      } */
+
+      /* transition-timing-function 속성 */
+      /* .bar:nth-child(1) {
+        transition-timing-function: linear;
+      }
+      .bar:nth-child(2) {
+        transition-timing-function: ease;
+      }
+      .bar:nth-child(3) {
+        transition-timing-function: ease-in;
+      }
+      .bar:nth-child(4) {
+        transition-timing-function: ease-in-out;
+      }
+      .bar:nth-child(5) {
+        transition-timing-function: ease-out;
+      } */
+
+      /* transition-property */
+      #graph:hover > .bar:nth-child(1) {
+        background-color: red;
+        width: 100px;
+      }
+      #graph:hover > .bar:nth-child(2) {
+        background-color: blue;
+        width: 300px;
+      }
+      #graph:hover > .bar:nth-child(3) {
+        background-color: green;
+        width: 400px;
+      }
+      #graph:hover > .bar:nth-child(4) {
+        background-color: yellow;
+        width: 200px;
+      }
+      #graph:hover > .bar:nth-child(5) {
+        background-color: pink;
+        width: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Css3 Transition Graph</h1>
+    <div id="graph">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </body>
+</html>
+
+<!-- 
+    transition 속성
+    transition / 모든 transition 속성을 한 번에 사용한다.
+    transition-delay / 이벤트 발생 후 몇 초 후에 재생할지 지정한다.
+    transition-duration / 몇 초 동안 재생할지 지정한다.
+    transition-property / 어떤 속성을 변형할지 지정한다.
+    transition-timing-function / 수치 변형 함수를 지정한다.
+
+    transition-timing-function 속성은 수치를 변형하는 함수를 지정 할때 사용하는 속성이다.
+    CSS3가 기본으로 제공하는 수치 변형 함수는
+    ease, linear, ease-in, ease-out, ease-in-out 가 있다.
+    마음에 드는 형태가 없다는 cubic-bezier() 함수를 사용하면 된다
+    cubic-bezier() 함수는 1x1 크기의 사각형에서 두 점의 위치를 지정해 베지어 곡선을 만드는 함수이다.
+    cubic-bezier(X0, Y0, X1, Y1)
+    사용자 정의 수치 변형 함수(http://cubic-bezier.com/)에서 만들 수 있다.
+
+    transition-property 속성은 특정 스타일 속성만 애니메이션을 적용하고 싶을 때 혹은
+    각각의 속성에 다른 형태로 애니메이션을 진행하고 싶을 때 사용한다.
+    transition-property 속성으로 스타일 속성을 지정하고 각각 변화 주고 싶은 속성에
+    추가로 넣는다.
+
+    모든 변형 속성은 transition 속성을 한 번에 입력이 가능하다.
+    transition: <transition-property> <transition-duration> <transition-timing-function> 
+        <transition-delay> ...(여러 속성을 적용하고 싶으면 순서대로 추가 입력)
+    
+    EX) transition: background-color 1s ease, width 5s linear 1s
+ -->
