@@ -1,0 +1,61 @@
+<!-- 2차원 변환 -->
+<!-- 대부분의 컴퓨터 프로그램은 화면 좌표를 사용한다.
+왼쪽 위에 위치하는 점이 영점이며 오른쪽과 아래로 갈수록 크기가 증가한다.
+Z축을 추가하면 3차원 화면 좌표로 확장되며 Z축은 웹브라우저를 보는 사용자에계 가까울수록 큰값이다. -->
+<!-- 3D Max 또는 Maya 같은 3차원 개발 툴에서 사용하는 좌표와 수학시간에 배운 좌표는 직교 좌표(데카르트 좌표)라고 부른다. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      section {
+        width: 100px;
+        height: 100px;
+        border: 5px solid black;
+      }
+      div {
+        width: 100px;
+        height: 100px;
+        background: red;
+
+        /* transform: rotate(60deg) scale(1.2) skewY(10deg); */
+
+        /* 변환 함수 순서(1) */
+        /* transform: translateX(50px) rotate(60deg); */
+
+        /* 변환 함수 순서(1) */
+        transform: rotate(60deg) translateX(50px);
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div></div>
+    </section>
+  </body>
+</html>
+
+<!-- 
+    transform 속성
+    CSS3부터는 transform 속성을 사용해 객체르 변환할 수 있게 되었다. 
+    변환이 가능하다는 이야기는 HTML 페이지 스스로 애니메이션 같은 플래쉬 콘텐츠를 만들 수 있다는 뜻이다.
+    그래서 변환은 CSS3에서 가장 중요한 특징으로 꼽히고 있다.
+
+    transform 속성 안에 함수를 사용해 변환를 수행한다.
+    
+    2차원 변환 함수
+    translate(translateX, translateY) / 특정 크기만큼 이동한다.
+    translateX(translateX) / X축으로 특정 크키만큼 이동한다.
+    translateY(translateY) / Y축으로 특정 크기만큼 이동한다.
+    scale(scaleX, scaleY) / 특정 크기만큼 확대 및 축소한다.
+    scaleX(scaleX) / X축으로 특정 크기만큼 확대 및 축소한다.
+    scaleY(scaleY) / Y축으로 특정 크기만큼 확대 및 축소한다.
+    skew(angleX, angleY) / 특정 각도만큼 기울인다.
+    skew(angleX) / X축으로 특정 각도만큼 기울인다.
+    skew(angleY) / Y축으로 특정 각도만큼 기울인다.
+    rotate(angleZ) / 특정 각도만큼 회전한다.
+
+    변환 함수의 순서
+    transform 속성에 변환 함수를 입력하는 순서에 따라 실행결과가 바뀔 수 있다.
+ -->
