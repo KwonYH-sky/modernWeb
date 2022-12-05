@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test Page</title>
+    <style>
+      header {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        height: 50px;
+        background: black;
+      }
+
+      #wheel {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+
+        transform-style: preserve-3d;
+        animation: rint 10s infinite linear;
+      }
+
+      .item {
+        position: absolute;
+
+        margin-left: -100px;
+        margin-top: -100px;
+        width: 190px;
+        height: 190px;
+        border: 5px solid black;
+        background: green;
+      }
+      .item:nth-child(1) {
+        transform: rotateY(0deg) translateZ(-200px);
+      }
+      .item:nth-child(2) {
+        transform: rotateY(60deg) translateZ(-200px);
+      }
+      .item:nth-child(3) {
+        transform: rotateY(120deg) translateZ(-200px);
+      }
+      .item:nth-child(4) {
+        transform: rotateY(180deg) translateZ(-200px);
+      }
+      .item:nth-child(5) {
+        transform: rotateY(240deg) translateZ(-200px);
+      }
+      .item:nth-child(6) {
+        transform: rotateY(300deg) translateZ(-200px);
+      }
+
+      @keyframes rint {
+        from {
+          transform: rotateX(-20deg) rotateY(0deg);
+        }
+        to {
+          transform: rotateX(-20deg) rotateY(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header></header>
+    <div id="viewport">
+      <div id="wheel">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!--
+    transform 속성과 z-index 속성 
+    transform 속성을 사용하면 Z축 위치를 조절 할 수 있다.
+    이 때문에 두 태그가 겹칠 때 Z축이 앞에 있으면 어떤 것이 위로 나오는지 혼동하는 경우가 많다.
+    일반적으로 두 기준을 적용한다.
+    1. z-index 속성을 우선하여 어떤 태그가 위에 올지 판별한다.
+    2. 부모의 transform-style 속성에 preserve-3d 키워드가 적용된 경우에만 자손 산의 Z축 위치를 적용한다.
+
+    header 태그가 위에 위치하므로 회전하는 대상 보다 z-index 속석이 작아 회전체가 앞에 있게 나온다.
+    #wheel 태그의 transform-style 속성에 preserve-3d 키워드를 적용했으므로 그 자손들은 z-index 속성보다
+    transform 속성을 우선시한다. 따라서 3차원 회전체가 생긴다.
+ -->
