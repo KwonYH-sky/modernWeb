@@ -1,0 +1,61 @@
+<!-- 화면 방향 전환 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Media Query Basic</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @media screen and (orientation: portrait) {
+        html {
+          background: red;
+          color: white;
+          font-weight: bold;
+        }
+      }
+
+      @media screen and (orientation: landscape) {
+        html {
+          background: green;
+          color: white;
+          font-weight: bold;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lorem ipsum</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+      ultricies, mauris vitae bibendum sagittis, quam leo euismod arcu, nec
+      tincidunt enim nibh vitae lacus. Integer fermentum nec velit a varius. Ut
+      viverra dui a risus malesuada, in mollis leo posuere. Nam risus velit,
+      sollicitudin et nibh a, venenatis scelerisque metus. Integer imperdiet
+      diam felis, porttitor eleifend lacus placerat a. Cras vitae eleifend
+      lacus, vitae efficitur lacus. Quisque elementum mi et lacus aliquet
+      tristique non vitae mi. Integer posuere, neque in pharetra vehicula, nulla
+      urna pulvinar arcu, ultrices lobortis eros magna id dui. Mauris pulvinar
+      tristique ante et pellentesque. Duis auctor ullamcorper faucibus. Aliquam
+      ut lacus imperdiet, euismod dolor quis, ornare est.
+    </p>
+    <p>
+      Maecenas id lobortis lorem. Aliquam erat volutpat. Fusce facilisis aliquet
+      felis quis interdum. Nulla viverra arcu vitae pretium convallis. Fusce
+      finibus dictum augue, sit amet luctus eros placerat at. Vestibulum vel
+      diam vel ex dapibus fringilla quis quis magna. In gravida et enim sit amet
+      lacinia. Nullam dapibus ullamcorper felis ut congue. Fusce sagittis felis
+      nibh, sit amet fringilla tellus ultricies at. Aliquam consequat dui at
+      convallis mattis. Pellentesque feugiat mollis sodales. Pellentesque
+      habitant morbi tristique senectus et netus et malesuada fames ac turpis
+      egestas. Nulla est lectus, lobortis vel accumsan ut, feugiat sit amet
+      ligula. Praesent consectetur nisi at ligula scelerisque, eget accumsan
+      orci tincidunt.
+    </p>
+  </body>
+</html>
+
+<!-- 
+    미디어 쿼리를 사용하면 디바이스가 수평 상태로 있는지 수직 상태로 있는지 확인 할 수 있다.
+    화면 방행 전환을 확인 하고 싶다면 orientation 속성을 사용한다.
+    orientation 속성에 portrait 키워드를 사용하면 수직 상태,
+    landscape 키워드를 사용하면 수평 상태이다.
+ -->
