@@ -13,7 +13,16 @@
     />
     <style>
       body {
-        padding-top: 70px;
+        padding-top: 80px;
+      }
+      a {
+        text-decoration: none;
+      }
+      .jumbotron {
+        padding: 2rem 1rem;
+        margin-bottom: 2rem;
+        background-color: #e9ecef;
+        border-radius: 0.3rem;
       }
     </style>
     <!-- JavaScript Bundle with Popper -->
@@ -71,34 +80,52 @@
     <div class="container">
       <div class="row">
         <div class="col-md-3">
-          <h1>Lorem ipsum</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a orci
-            odio. Quisque vel vehicula erat. In hendrerit libero elit, eget
-            tempus quam eleifend et. Etiam a maximus metus. Nulla feugiat
-            accumsan elit quis hendrerit. Curabitur venenatis, urna vel laoreet
-            pulvinar, neque libero malesuada lacus, sed efficitur velit enim ac
-            libero. Nulla facilisi. Mauris ac risus auctor erat porta placerat.
-            Aenean eleifend, leo sed luctus sollicitudin, sapien sapien
-            consectetur sapien, quis sodales erat massa luctus justo. Praesent
-            nec neque augue. Aenean rhoncus in tortor eu volutpat. Suspendisse
-            vitae ultricies massa, sed lacinia leo. Proin euismod aliquet enim
-            quis lobortis. Donec nec venenatis lorem. Duis mollis eleifend
-            nulla, quis feugiat ipsum convallis vel.
-          </p>
-          <p>
-            Quisque tempus justo sit amet nulla malesuada pellentesque. Sed eu
-            elit massa. In tempor cursus lorem sit amet finibus. Nam eget urna
-            non lacus laoreet venenatis ultrices a odio. Vivamus porta eleifend
-            magna ornare molestie. Donec a fermentum erat. Pellentesque
-            dignissim, purus malesuada imperdiet tempus, lectus purus bibendum
-            magna, et commodo libero urna sed dui. In ligula turpis, eleifend
-            quis vulputate quis, condimentum eu lectus. Donec vitae maximus
-            lacus.
-          </p>
+          <div class="card">
+            <div class="card-header">Panel Title</div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><a href="#">HTML5</a></li>
+              <li class="list-group-item"><a href="#">CSS3</a></li>
+              <li class="list-group-item"><a href="#">ECMAScript5</a></li>
+            </ul>
+          </div>
+          <br />
+          <div class="card bg-info">
+            <div class="card-header">Panel Title</div>
+            <ul class="list-group">
+              <li class="list-group-item"><a href="#">JQuery</a></li>
+              <li class="list-group-item"><a href="#">HTML5 API</a></li>
+            </ul>
+          </div>
+          <br />
+          <div class="card bg-secondary">
+            <div class="card-header">Panel Title</div>
+            <ul class="list-group">
+              <li class="list-group-item"><a href="#">About</a></li>
+              <li class="list-group-item"><a href="#">Help</a></li>
+            </ul>
+          </div>
+          <br />
         </div>
         <div class="col-md-9">
-          <h1>Lorem ipsum</h1>
+          <div class="jumbotron">
+            <h1 class="display-4">HTML5 + CSS3 Basic</h1>
+            <p class="lead">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a
+              orci odio. Quisque vel vehicula erat. In hendrerit libero elit,
+              eget tempus quam eleifend et. Etiam a maximus metus. Nulla feugiat
+              accumsan elit quis hendrerit. Curabitur venenatis, urna vel
+              laoreet pulvinar, neque libero malesuada lacus, sed efficitur
+              velit enim ac libero. Nulla facilisi. Mauris ac risus auctor erat
+              porta placerat. Aenean eleifend, leo sed luctus sollicitudin,
+              sapien sapien consectetur sapien, quis sodales erat massa luctus
+              justo. Praesent nec neque augue. Aenean rhoncus in tortor eu
+              volutpat. Suspendisse vitae ultricies massa, sed lacinia leo.
+              Proin euismod aliquet enim quis lobortis. Donec nec venenatis
+              lorem. Duis mollis eleifend nulla, quis feugiat ipsum convallis
+              vel.
+            </p>
+            <a href="#" class="btn btn-primary btn-lg">Learn More</a>
+          </div>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a orci
             odio. Quisque vel vehicula erat. In hendrerit libero elit, eget
@@ -165,25 +192,6 @@
             augue, et fermentum magna tincidunt a. Nunc a commodo quam, sit amet
             euismod erat. Vestibulum rhoncus sollicitudin sem eget sagittis.
           </p>
-          <p>
-            Duis eu vestibulum nisl. Integer et mi nisi. Nam at sem id nibh
-            porta posuere et sagittis dolor. Vivamus nec neque est. Donec rutrum
-            mauris tempus, placerat justo commodo, finibus odio. Ut rhoncus,
-            nunc ut dignissim viverra, erat sem varius ex, sit amet facilisis
-            eros orci et eros. Nam sit amet leo a nulla aliquet pretium. Proin
-            in faucibus augue. Proin eleifend magna eu mattis commodo. Aliquam
-            erat volutpat.
-          </p>
-          <p>
-            Quisque tempus justo sit amet nulla malesuada pellentesque. Sed eu
-            elit massa. In tempor cursus lorem sit amet finibus. Nam eget urna
-            non lacus laoreet venenatis ultrices a odio. Vivamus porta eleifend
-            magna ornare molestie. Donec a fermentum erat. Pellentesque
-            dignissim, purus malesuada imperdiet tempus, lectus purus bibendum
-            magna, et commodo libero urna sed dui. In ligula turpis, eleifend
-            quis vulputate quis, condimentum eu lectus. Donec vitae maximus
-            lacus.
-          </p>
         </div>
       </div>
     </div>
@@ -221,4 +229,13 @@
 
     너비가 작을 때 그리드를 나누면 보기가 좋지 않기에 
     적당하게 태블릿과 테스크톱의 경계가 되는 md 클래스를 사용하는 것이 좋다.
+
+    수직 목록을 나타낼 땐 list-group 클래스를 사용한다.
+    목록 요소들에 제목을 달고 싶을 때는 card 클래스를 사용하면 된다.
+    bg-primary, bg-secondary, panel-success, panel-info, panel-warring 클래스 등을 활용해 색상을 적용한다.
+
+    소규모 사이트를 만들 경우에는 부트스트랩을 활용하는게 좋다.
+    하지만 부트스트랩은 다른 사이트들과 디자인이 너무 비슷해지는 단점이 존재한다.
+    따라서 어느 정도 규모의 사이트를 만들 때는 부트스트랩과 같은 프레임워크의 일부만 활용하거나 
+    직적 구현하는 경우가 많다.
  -->
