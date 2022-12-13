@@ -1,0 +1,82 @@
+header {
+  width: 800px;
+  margin: 0 auto;
+
+  hgroup {
+    h1 {
+      color: red;
+    }
+
+    h2 {
+      color: blue;
+    }
+  }
+  nav {
+    ul {
+      overflow: hidden;
+    }
+    li {
+      float: left;
+    }
+  }
+}
+
+@color: #ff0000;
+@hue: hue(@color);
+@saturation: saturation(@color);
+@lightness: lightness(@color);
+
+div {
+  height: 5px;
+  .foo(37);
+}
+
+.foo(@n, @i: 1) when (@i =< @n) {
+  &:nth-child(@{i}) {
+    background: hsl(@hue + (@i * 10 - 10), @saturation, @lightness);
+  }
+  .foo(@n, (@i + 1));
+}
+
+// div:nth-child(1) {
+//   background: darken(@color, 0%);
+// }
+// div:nth-child(2) {
+//   background: darken(@color, 10%);
+// }
+// div:nth-child(3) {
+//   background: darken(@color, 20%);
+// }
+// div:nth-child(4) {
+//   background: darken(@color, 30%);
+// }
+// div:nth-child(5) {
+//   background: darken(@color, 40%);
+// }
+// div:nth-child(6) {
+//   background: darken(@color, 50%);
+// }
+/*
+변환된 코드
+div {
+  height: 10px;
+}
+div:nth-child(1) {
+  background: #ff0000;
+}
+div:nth-child(2) {
+  background: #cc0000;
+}
+div:nth-child(3) {
+  background: #990000;
+}
+div:nth-child(4) {
+  background: #660000;
+}
+div:nth-child(5) {
+  background: #330000;
+}
+div:nth-child(6) {
+  background: #000000;
+}
+*/

@@ -1,0 +1,66 @@
+// Less 스타일시트는 변수를 만들 수 있다.
+// 변수를 만들 때는 @기호를 사용하며 스타일시트에서 사용하는 모든 단위를 저장할 수 있다.
+
+@color: #4d926f;
+@defaultFontSize: 16px;
+
+body {
+  color: @color;
+  font-size: @defaultFontSize;
+}
+/*
+변환된 코드
+body{
+    color:#4d926f;
+    font-size:16px;
+}
+*/
+
+// Less 스타일시트는 연산을 수행할 수 있다.
+@margin: 10px;
+@padding: 10px;
+@width: 200px;
+
+div {
+  width: @width - (@padding * 2);
+  padding: @padding;
+  margin: @margin;
+}
+/*
+변환된 코드
+div{
+    width:180px;
+    padding:10px;
+    margin:10px;
+}
+*/
+
+// Less 스타일시트는 블록 안에 블록을 포함할 수 있다.
+// 이때 블록 내부에서는 & 선택자를 사용할 수 있다. 블록 내부에서 자신을 뜻하는 선택자이다.
+div {
+  background: black;
+  &:hover {
+    background: white;
+  }
+  a {
+    background: red;
+    color: white;
+    &:hover {
+      background: blue;
+    }
+    &:active {
+      background: green;
+    }
+  }
+}
+/*
+변환된 코드
+div{background: black;}
+div:hover{background: white;}
+div a{
+  background: red;
+  color:white;
+}
+div a:hover{background: blue;}
+div a:active{background: green;}
+*/
