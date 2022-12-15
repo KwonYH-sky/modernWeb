@@ -1,77 +1,61 @@
-<!-- 그리드 시스템은 미리 정의된 스타일시트로 격자 위에 요소를 배치할 수 있게 하는 것을 의미한다.
-이때 정의된 스타일 자체를 그리드 시스템이라고 부르기도 한다. -->
+<!-- 동적 그리드 시스템은 정적 그리드 보다 게산이 복잡함으로 
+    Less 스타일시트를 이용해 스타일시트를 만드는 것이 좋다. -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Static Grid System</title>
+    <title>Dynamic Grid System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
       .container {
-        width: 960px;
-        margin: 0 auto;
+        margin: 0;
+        padding: 0;
       }
       .row {
         overflow: hidden;
+        width: 100%;
       }
-      /* .span_1,
-      .span_2,
-      .span_3,
-      .span_4,
-      .span_5,
-      .span_6,
-      .span_7,
-      .span_8,
-      .span_9,
-      .span_10,
-      .span_11,
-      .span_12 {
+      .row [class*="span"] {
         float: left;
-        GutterWidth를 기반으로 구성
-        margin-left: 10px;
-        margin-right: 10px;
-      } */
-
-      /* 문자열 속성 선택자를 사용하면 굉장히 깔끔하게 표현가능하다. */
-      [class*="span"] {
-        float: left;
-        /* GutterWidth를 기반으로 구성 */
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 2%;
+      }
+      .row [class*="span"]:first-child {
+        margin-left: 0;
       }
       .span_1 {
-        width: 60px;
+        width: 6.5%;
       }
       .span_2 {
-        width: 140px;
+        width: 15%;
       }
       .span_3 {
-        width: 220px;
+        width: 23.5%;
       }
       .span_4 {
-        width: 300px;
+        width: 32%;
       }
       .span_5 {
-        width: 380px;
+        width: 40.5%;
       }
       .span_6 {
-        width: 460px;
+        width: 49%;
       }
       .span_7 {
-        width: 540px;
+        width: 57.5%;
       }
       .span_8 {
-        width: 610px;
+        width: 66%;
       }
       .span_9 {
-        width: 700px;
+        width: 74.5%;
       }
       .span_10 {
-        width: 780px;
+        width: 83%;
       }
       .span_11 {
-        width: 860px;
+        width: 91.5%;
       }
       .span_12 {
-        width: 940px;
+        width: 100%;
       }
     </style>
   </head>
@@ -236,17 +220,9 @@
 </html>
 
 <!-- 
-    대부분의 그리드 시스템이 12개의 열을 기준으로 한다.
-    숫자 12는 약수가 많은 숫자이므로 어떤 레이아웃에나 적용할 수 있다. 그래서 일반적으로 그리드 시스템은 12개의 열을 사용한다.
-    많은 개발자들이 960픽셀 또는 1200픽셀을 기본 너비로 하는 것도 12의 공약수를 갖고 있기 때문이다.
-
-    그리드 시스템은 Column 공간과 Gutter 공간으로 분리한다. Gutter는 Gap이라는 용어로도 사용이 된다.
-    Column은 열의 길이이고 Gutter는 열 사이의 길이이다.
-    이를 기반으로 정적 그리드 시스템을 만들 때는 다음 공식을 사용
-    ContainerWidth - (ColumnWidth + GutterWidth) x 12
-
-    각각의 너비는 다음 수학공식을 사용한다.
-    width = (columnWidth x Column) + (GutterWidth x (Column-1))
-
-
+    동적 그리드 시스템을 만들 때는 다음 공식을 사용한다.
+    공식1 (ColumnWidth + GutterWidth) x ColumnCount - GutterWidth = 100
+    공식2 ColumnWidth = (100 -(ColumnCount -1) x GutterWidth) / ColumnCount
+    공식2는 공식1을 사용해 유도한 공식이다.
+    일반적으로 공식2를 사용한다. GutterWidth를 2%로 적용하면 ColumnWidth는 6.5%가 나온다.
  -->
