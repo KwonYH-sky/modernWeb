@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roman Holiday</title>
+    <link rel="stylesheet" href="StyleSheet.css" />
+    <script src="http://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // 내비게이션 버튼
+        $("#main_navigation a").click(function () {
+          // 변수 선언
+          var target = $(this).attr("data-target");
+          // 클래스를 적용
+          $(":not([data-name=" + target + "])").removeClass("active");
+          $("[data-name=" + target + "]").addClass("active");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <hgroup id="title">
+      <h1 data-name="information">Information</h1>
+      <h1 data-name="character">Character</h1>
+      <h1 data-name="multimedia">Multimedia</h1>
+    </hgroup>
+    <section id="container">
+      <div class="main" data-name="main"></div>
+      <div class="Information" data-name="information"></div>
+      <div class="character" data-name="character"></div>
+      <div class="multimedia" data-name="multimedia"></div>
+    </section>
+    <nav id="main_navigation">
+      <ul>
+        <li><a href="#" data-target="information">Movie Info</a></li>
+        <li><a href="#" data-target="character">Character</a></li>
+        <li><a href="#" data-target="multimedia">Multimedia</a></li>
+        <li><a href="#">Download</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>
