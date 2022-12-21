@@ -1,0 +1,45 @@
+<!-- 라파엘 플러그인은 자바스크립트를 사용해 SVG 태그를 쉽게 생성할 수 있는 플러그인이다. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SVG With Raphael</title>
+    <script src="http://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="raphael.min.js"></script>
+    <script>
+      $(document).ready(() => {
+        // 변수를 선언
+        var canvas = document.getElementById("canvas");
+        var paper = Raphael(canvas, 700, 400);
+
+        // 원을 생성
+        var rect = paper.rect(0, 0, 700, 300);
+        var circle = paper.circle(350, 150, 100);
+
+        // 색상 및 선을 지정
+        rect.attr("fill", "red");
+
+        circle.attr("fill", "orange");
+        circle.attr("stroke", "black");
+
+        // 이벤트를 연결
+        circle
+          .mousedown(() => {})
+          .mouseup(() => {})
+          .mouseover(() => {})
+          .mouseout(() => {});
+      });
+    </script>
+  </head>
+  <body>
+    <div id="canvas"></div>
+  </body>
+</html>
+
+<!-- 
+  Raphael() 함수의 첫 번째 매개변수에는 SVG 태그를 놓을 태그를 입력 후 
+  두 번째 매개변수와 세 번째 매개변수는 SVG 태그의 너비와 높이를 입력한다.
+
+  SVG 태그가 애니메이션을 지원하므로 라파엘 플러그인을 사용해 애니메이션도 만들 수 있다.
+  라파엘을 사용해 복잡한 지도를 그리거나 동적 그래프를 표현할 수 있다.
+ -->
