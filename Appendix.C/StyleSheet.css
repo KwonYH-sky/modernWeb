@@ -123,3 +123,153 @@ body {
 #title > h1:nth-child(3) {
   background-position: 0px -96px;
 }
+
+#container {
+  /* 자식의 position 속성값이 absolute 키워드이므로 적용 */
+  position: relative;
+
+  /* 내부의 그림이 좌우로 잘리는 것을 방지 */
+  width: 100%;
+  padding: 0 40px;
+  margin-left: -40px;
+
+  /* 크기 설정 및 안 보이게 */
+  height: 500px;
+  overflow: hidden;
+}
+
+div[data-name] {
+  /* 위치 설정 */
+  position: absolute;
+  left: 40px;
+  top: 550px;
+
+  /* 크기 설정 */
+  width: 960px;
+  height: 500px;
+
+  /* 애니메이션 설정 */
+  transition-duration: 2s;
+}
+div[data-name].active {
+  top: 0;
+}
+div[data-name="main"] > img {
+  /* 위치 설정 */
+  position: absolute;
+  left: -50px;
+  bottom: 0;
+}
+
+div[data-name="information"] > img {
+  /* 위치 설정 */
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+div[data-name="information"] > div {
+  /* 위치 설정 */
+  position: absolute;
+  left: 450px;
+  top: 30px;
+
+  /* 크기 설정 */
+  width: 480px;
+}
+
+div[data-name="multimedia"] {
+  padding: 10px;
+}
+
+div[data-name="character"] > a {
+  /* 크기 설정 */
+  display: block;
+  width: 40px;
+  height: 40px;
+
+  /* 이미지 설정 및 글자 안보이게 */
+  text-indent: -9999px;
+  background: url(/image/Movie/Arrow_Images.png);
+}
+
+div[data-name="character"] > a:nth-child(1) {
+  /* 스프라이트 이미지 설정 */
+  background-position: 0px 0px;
+
+  /* 위치 설정 */
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  margin-top: -20px;
+}
+div[data-name="character"] > a:nth-child(2) {
+  /* 스프라이트 이미지 설정 */
+  background-position: 0px 40px;
+
+  /* 위치 설정 */
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -20px;
+}
+div[data-name="character"] > article {
+  /* 크기 설정 */
+  width: 960px;
+  height: 500px;
+
+  /* 위치 설정 */
+  position: absolute;
+  left: 0;
+  top: 500px;
+
+  /* 에니메이션 설정 */
+  transition-duration: 2s;
+}
+div[data-name="character"] > article.show {
+  /* 위치 설정 */
+  top: 0;
+}
+
+article {
+  position: relative;
+}
+article > h1 {
+  /* 위치 설정 */
+  position: absolute;
+  left: 90px;
+  top: 40px;
+
+  /* 크기 설정 */
+  font-size: 30px;
+}
+
+article > img:nth-of-type(1) {
+  /* 위치 설정 */
+  position: absolute;
+  left: 200px;
+  top: 50px;
+}
+
+article > img:nth-of-type(2) {
+  /* 위치 설정 */
+  position: absolute;
+  left: 100px;
+  top: 120px;
+
+  /* 그림자 설정 */
+  box-shadow: 0 5px 10px 0px;
+  border-radius: 10px;
+}
+
+article > p {
+  /* 위치 설정 */
+  position: absolute;
+  left: 400px;
+  top: 110px;
+
+  /* 크기 설정 */
+  width: 500px;
+}
+a {
+  z-index: 9999;
+}

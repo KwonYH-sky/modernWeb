@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="StyleSheet.css" />
     <script src="http://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script>
-      $(document).ready(function () {
+      $(document).ready(() => {
         // 내비게이션 버튼
         $("#main_navigation a").click(function () {
           // 변수 선언
@@ -14,6 +14,25 @@
           // 클래스를 적용
           $(":not([data-name=" + target + "])").removeClass("active");
           $("[data-name=" + target + "]").addClass("active");
+        });
+
+        // 캐릭터 이동 버튼
+        var currentPosition = 1;
+        $("#character > a:nth-child(1)").click(() => {
+          currentPosition -= 1;
+          if (currentPosition < 1) {
+            currentPosition = 3;
+          }
+          $("article").removeClass("show");
+          $("article:nth-of-type(" + currentPosition + ")").addClass("show");
+        });
+        $("#character > a:nth-child(2)").click(() => {
+          currentPosition += 1;
+          if (currentPosition > 3) {
+            currentPosition = 1;
+          }
+          $("article").removeClass("show");
+          $("article:nth-of-type(" + currentPosition + ")").addClass("show");
         });
       });
     </script>
@@ -25,10 +44,96 @@
       <h1 data-name="multimedia">Multimedia</h1>
     </hgroup>
     <section id="container">
-      <div class="main" data-name="main"></div>
-      <div class="Information" data-name="information"></div>
-      <div class="character" data-name="character"></div>
-      <div class="multimedia" data-name="multimedia"></div>
+      <!-- 메인 페이지 -->
+      <div id="main" data-name="main" class="active">
+        <img src="/image/Movie/Middle_Foreground.png" alt="" />
+      </div>
+      <!-- 정보 페이지 -->
+      <div id="Information" data-name="information">
+        <img src="/image/Movie/Information_Image.png" alt="" />
+        <div class="description">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+            accumsan, orci sed commodo accumsan, leo nulla porta tellus, id
+            sodales odio metus eget sem. Suspendisse imperdiet elit id felis
+            volutpat imperdiet. Cras vitae pulvinar dolor. Vivamus laoreet risus
+            non lectus varius venenatis. Duis aliquet ut leo convallis
+            tincidunt. Aliquam erat volutpat. Donec consequat enim eget nulla
+            volutpat consectetur. Cras iaculis neque eu elit sollicitudin
+            vestibulum. Sed dui tortor, blandit et felis a, egestas tincidunt
+            nisl. Donec et cursus enim. Nunc non orci massa. Nulla enim tellus,
+            pellentesque ut bibendum ut, consectetur vitae sapien. Integer eget
+            tristique orci. Fusce mi est, tempus et scelerisque vel, cursus in
+            lorem. Nulla facilisi. Praesent nunc velit, volutpat vel feugiat
+            elementum, accumsan a velit.
+          </p>
+          <p>
+            Phasellus nec volutpat eros. Vestibulum erat tellus, efficitur eu
+            scelerisque aliquet, posuere ut lorem. Mauris et dui feugiat, tempor
+            tellus et, laoreet justo. Mauris convallis interdum risus, efficitur
+            tempor lorem dictum a. Proin rhoncus fringilla porttitor. In
+            lobortis sodales enim, ac suscipit enim. Nam et tellus et magna
+            vehicula pellentesque a venenatis eros. Suspendisse potenti. Ut
+            cursus lectus non sodales venenatis. Sed pellentesque, mauris vitae
+            ornare facilisis, sapien augue tristique nunc, et fringilla mauris
+            massa id erat. Nam viverra magna justo, vitae luctus ante malesuada
+            quis. Mauris vehicula, massa sit amet facilisis vestibulum, ex ex
+            accumsan elit, non consequat tellus mi aliquam sapien.
+          </p>
+        </div>
+      </div>
+      <!-- 캐릭터 페이지 -->
+      <div id="character" data-name="character">
+        <a href="#">Left Button</a>
+        <a href="#">Right Button</a>
+        <article class="show">
+          <h1>Princess Ann</h1>
+          <img src="/image/Movie/Character_Text_1.png" alt="" />
+          <img src="/image/Movie/Character_1.png" alt="" />
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
+            quisquam. Rerum laudantium modi neque voluptates reprehenderit
+            voluptate amet fuga consectetur. Tempora sit repellat voluptatum
+            ipsum mollitia et fugiat laudantium quaerat. Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Vitae nihil sed molestiae! Fuga
+            officia quo velit repellendus accusantium quasi magnam quam,
+            quisquam numquam perspiciatis harum, minima, deserunt eligendi
+            impedit cum.
+          </p>
+        </article>
+        <article>
+          <h1>Joe Bradley</h1>
+          <img src="/image/Movie/Character_Text_2.png" alt="" />
+          <img src="/image/Movie/Character_2.png" alt="" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
+            numquam earum debitis et, asperiores eius. Distinctio iure
+            perspiciatis quod deserunt nostrum eum culpa sint tempora hic!
+            Incidunt placeat eaque ex! Lorem ipsum, dolor sit amet consectetur
+            adipisicing elit. Aliquam consectetur eaque, ex deleniti est quod
+            incidunt numquam, molestiae porro minima distinctio nisi praesentium
+            reiciendis veniam! Ab officiis perspiciatis fuga suscipit!
+          </p>
+        </article>
+        <article>
+          <h1>Radovich</h1>
+          <img src="/image/Movie/Character_Text_3.png" alt="" />
+          <img src="/image/Movie/Character_3.png" alt="" />
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            magnam magni, in esse, placeat, voluptatem unde voluptate ut maiores
+            nesciunt eos doloribus harum delectus soluta quibusdam modi sint
+            maxime accusantium. Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit. Possimus laborum neque dolorem eligendi laboriosam
+            vitae sint quos, dignissimos doloribus tenetur velit consequuntur
+            aliquam quo itaque delectus quam inventore quod esse.
+          </p>
+        </article>
+      </div>
+      <!-- 영상 페이지 -->
+      <div id="multimedia" data-name="multimedia">
+        <video width="940" height="480" controls="controls"></video>
+      </div>
     </section>
     <nav id="main_navigation">
       <ul>
