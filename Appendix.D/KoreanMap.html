@@ -1,0 +1,117 @@
+<!-- SVG 태그를 이용한 지도 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        width: 960px;
+        margin: 0 auto;
+      }
+
+      #main_section {
+        overflow: hidden;
+      }
+      #main_article {
+        width: 460px;
+        float: left;
+      }
+      #map_image {
+        width: 500px;
+        float: right;
+      }
+      figure {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <script src="http://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="KoreaMapPathData.js"></script>
+    <script src="raphael.min.js"></script>
+    <script>
+      $(document).ready(() => {
+        // Create Function
+        function randonColor() {
+          let letters = "0123456789ABCDEF".split("");
+          let color = "#";
+          for (let i = 0; i < 6; i++) {
+            color += letters[Math.round(Math.random() * 15)];
+          }
+          return color;
+        }
+
+        let canvas = document.getElementById("map_image");
+        let paper = Raphael(canvas, 500, 716);
+
+        $.each(koreaMapPathData, (index, item) => {
+          // Create Path
+          let path = paper.path(item["d"]);
+
+          // Stroke Path
+          path.attr("stroke", item["stroke"]);
+
+          // Fill Path
+          if (item["fill"] != "none") {
+            path.attr("fill", randonColor());
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <header id="main_header">
+      <h1>Korea Map Path Data</h1>
+    </header>
+    <section id="main_section">
+      <article id="main_article">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+          pellentesque sit amet libero eget sagittis. Vivamus porttitor risus
+          sed aliquet vehicula. Praesent pellentesque eget magna sed malesuada.
+          Praesent molestie nisi sit amet nulla tincidunt mollis. Suspendisse
+          arcu magna, interdum sed dolor a, euismod dictum justo. Phasellus a
+          erat gravida, laoreet leo eget, ullamcorper dui. Maecenas tristique id
+          erat sed condimentum. Aliquam ultrices nunc massa, a lobortis dui
+          fringilla a. Suspendisse quis nibh leo. Morbi fringilla ullamcorper
+          ornare. Suspendisse potenti. Proin in ligula nec magna convallis
+          vestibulum ac ut turpis. In varius diam sit amet pulvinar ultrices.
+          Cras consequat tortor in lacinia pulvinar. Phasellus mollis nunc enim,
+          in pellentesque arcu tristique ut. Sed dictum eros et turpis aliquam
+          mattis.
+        </p>
+        <p>
+          Pellentesque nec justo rhoncus, ultrices nulla vel, euismod lorem.
+          Proin eget ante vel tellus varius aliquam. Suspendisse quis leo
+          pretium, dignissim augue ullamcorper, facilisis dui. Pellentesque
+          vulputate nisl eu enim dapibus commodo. Praesent euismod molestie
+          pellentesque. Cras ac metus porttitor, accumsan ipsum eu, consectetur
+          odio. Sed id ultricies ipsum, at ullamcorper enim. Pellentesque in
+          mattis lorem. Aenean varius tellus id erat blandit varius. Cras eget
+          eros augue. Pellentesque id felis felis. Duis purus lorem, semper
+          vitae scelerisque eget, imperdiet quis orci. Aenean arcu urna, egestas
+          id nunc nec, mattis convallis tellus. Suspendisse lobortis tortor vel
+          risus vestibulum iaculis. Duis sed commodo ligula.
+        </p>
+        <p>
+          Nunc eu sollicitudin dui, non venenatis dui. Duis volutpat id dui nec
+          fringilla. Suspendisse ut nisl congue, egestas metus sit amet, congue
+          orci. Nullam vel justo sem. Interdum et malesuada fames ac ante ipsum
+          primis in faucibus. Aenean mattis felis ut auctor consequat. Proin
+          finibus risus rhoncus suscipit aliquam. Suspendisse ac venenatis
+          libero. Integer egestas ante et augue efficitur tincidunt. Quisque vel
+          ante id tellus tempus pellentesque. Quisque sed feugiat nibh. Aenean
+          quis dictum quam. Donec mollis leo at purus viverra interdum. Duis
+          turpis lacus, porta vitae tristique tincidunt, ultrices nec mi. In
+          lobortis fermentum dolor, ut euismod ante dapibus ac.
+        </p>
+      </article>
+      <figure id="map_image"></figure>
+    </section>
+  </body>
+</html>
+
+<!-- 
+  최근 테이터 시각화가 뜨면서 통계 자료와 SVG 태그를 합티는 일이 늘어 나고 있다.
+  SVG 태그와 통계 자료를 사용하면 실시간으로 반응하는 데이터 시각화 프로그램을 만들 수 있다.
+ -->
